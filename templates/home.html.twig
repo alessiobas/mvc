@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Home</h1>
+<p class="important">
+    Welcome to the page.
+    Some things are worth thinking about.
+</p>
+    <img src="img/mepic.jpg" width="200px" lenght="160px" alt="albi">
+
+
+<p><a href="{{ absolute_url("img/mepic.jpg") }}">View the image</a></p>
+
+{% endblock %}
