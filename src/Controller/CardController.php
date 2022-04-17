@@ -77,4 +77,28 @@ class CardController extends AbstractController
             $data
         );
     }
+
+    /**
+     * @Route("/card/deck/draw/:{number}", name="draw-number")
+     */
+    public function drawSeveralCards(SessionInterface $session, $number): Response
+    {
+        $newDeck = $session->get("newDeck") ?? new \App\Card\Deck();
+        if (count($newDeck->deck) == 0) {
+            $newDeck->fillDeck();
+        }
+        $newDeck->shuffle();
+        $cardsLeft = $newDeck->drawCard($number);
+        $amountCardsLeft = count($newDeck->deck);
+        $session->set("newDeck", $newDeck);
+        $data = [
+            "title" => "Draw several cards from deck",
+            "cardsLeft" => $cardsLeft,
+            "amountCardsLeft" => $amountCardsLeft
+        ];
+        return $this->render(
+            'card/draw.html.twig',
+            $data
+        );
+    }
 }
