@@ -2,3 +2,26 @@ html {
     background-color: red;
     color: white;
 }
+
+.deck
+{
+	width:50%;
+	margin: 20px auto;
+	border:solid 5px black;
+	padding: 10px;
+	border-radius:10px;
+	text-align: center;
+	color:white;
+}
+
+.card {
+    padding: 25px;
+    border: solid 1px #808080;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 14pt;
+    text-align: center;
+    color: black;
+    margin: 3px;
+}

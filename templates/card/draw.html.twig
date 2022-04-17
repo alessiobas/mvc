@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Draw card{% endblock %}
+
+{% block content %}
+
+<div class="deck">
+{% for card in cardsLeft %}
+<div class="card">
+{{ card.value }}
+{{ card.color }}
+{# {{ card.value }} #}
+</div>
+{% endfor %}
+</div>
+Amount of cards left in deck: {{amountCardsLeft}}
+
+{% endblock %}
