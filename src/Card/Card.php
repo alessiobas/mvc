@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Card;
+
 use App\Controller;
 
 class Card
