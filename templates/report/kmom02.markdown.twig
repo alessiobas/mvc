@@ -1,2 +1,18 @@
 Kmom02
 ----------
+
+
+#### Förklara kort de objektorienterade konstruktionerna arv, komposition, interface och trait och hur de används i PHP.
+Arv kan ses som en konstruktion med en relation mellan objekt som är-en relation, t.ex. om ett objekt ärver konstruktioner från en annan klass så tillhör konsturktionerna nu det nya objektet också. Komposition är en relation mellan objekt där kopplingen kan beskrivas som stark och relationen är "har-en". T.ex. ett hus har ett rum, komposition, där rummet försvinner om huset försvinner.
+Trait och interface kompletterar arv och komposition och ett trait är något som används av en klass för att "kopiera" koden från trait och användas i en eller flera klasser. Så om ett trait definieras och används i flera klasser och så vill man ändra i koden, så är det bara traitet som behöver ändras för att ändringen ska ske i alla klasser som använder traitet. 
+Ett Interface definierar metoder som används i en klass. Om en klass implementerar ett interface "lovar" klassen att erbjuda ett API som motsvaras av interfacet. 
+
+#### Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?
+Jag tyckte uppgiften var klurig, även om många av kravet satts som optionella. Jag utgick mycket från Dice exemplet som mos visade i guider och föreläsningar, tillsammans med en hel del googling och "trail and error" testning på kammaren. Jag implementerade inte några av de optionella kraven då jag hamnat lite efter i kursen.. Resultatet blev kanske inte jättelikt Dice exemplet, men det hjälpte att ha det som stöd vid implementationen av uppgiften. Jag är helt ok nöjd med resultatet då jag fått de olika delarna att fungera, men jag skulle kunna jobba ännu mer med struktur i koden och kanske lägga över vissa delar kod jag skrivier i min CardController till en annan modul som definierar en klass. Jag skulle även kunna ha implementerat en egen klass för en Hand och även en för Dice2, nu gjorde jag det enkelt för mig när jag t.ex. inkluderade jokrarna där jag helt enkelt adderade två nya jokerkort genom min metod addACard i Deck klassen. Den metoden definierade jag som så att jag kan lägga till nya kort när jag fyller en kortlek.
+
+#### Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. Var det något som du tror stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?
+Jag förstod det som om det rekommenderades att genomföras dessa delar i kmom03, så jag avvaktar med detta till nästa kmom. Min erfarenhet från att implementera flödesdiagram säger att det är ett bra tillvägagångssätt för att lättare se flödet i koden och tänka logiskt "på en högre nivå" vilket kan underlätta vid kodningen. Psuedokod tror jag också kommer hjälpa mig vid själva kodningen och med hjälp av detta kommer jag kunna reflektera mer över kodens struktur, innan jag börjar koda.
+
+
+#### Vilken är din TIL för detta kmom?
+Mycket lärorikt kmom överlag. Skulle jag välja något är det nog själva flödet och strukturen i klassernas metoder och hur de kopplas samman för att få fram önskat reslutat som är min TIL för detta kmom!
