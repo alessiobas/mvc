@@ -10,5 +10,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CardControllerJson extends AbstractController
 {
-    
+    /**
+     * @Route("/card/api/deck", name="api-deck")
+     */
+    public function apiDeck(): Response
+    {
+        $newDeck = new \App\Card\Deck();
+        $newDeck->fillDeck();
+        return new JsonResponse($newDeck->deck);
+    }
 }
