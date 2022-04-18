@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Play{% endblock %}
+
+{% block content %}
+
+<div class="deck">
+    {% for player in players %}
+    <div class="deck">
+        {# {% for i in amountPlayers %}
+        Player {{i}} #}
+        {% for card in player.hand %}
+            <div class="card">
+            {{ card.value }}
+            {{ card.color }}
+            </div>
+        {% endfor %}
+        {# {% endfor %} #}
+    </div>
+    {% endfor %}
+
+    Amount of cards left in deck: {{amountCardsLeft}}
+</div>
+{% endblock %}

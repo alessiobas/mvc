@@ -3,7 +3,7 @@
 {% block title %}Draw card{% endblock %}
 
 {% block content %}
-
+<div class="deck">
 <div class="deck">
 {% for card in cardsLeft %}
 <div class="card">
@@ -14,5 +14,5 @@
 {% endfor %}
 </div>
 Amount of cards left in deck: {{amountCardsLeft}}
-
+</div>
 {% endblock %}

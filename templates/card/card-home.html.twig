@@ -6,10 +6,13 @@
 <div class="deck">
     <ul>
         <li><a href="{{ path("card-home") }}">Card home</a></li>
-        <li><a href="{{ path("deck") }}">Deck</a></li>
-        <li><a href="{{ path("deck-shuffle") }}">Shuffled deck</a></li>
+        <li><a href="{{ path("deck") }}">Sorted deck</a></li>
+        <li><a href="{{ path("deck-shuffle") }}">Shuffle deck</a></li>
         <li><a href="{{ path("draw-card") }}">Draw a card</a></li>
-        <li><a href="{{ path("draw-number") }}">Draw several cards</a></li>
+        <li><a href="{{ path('draw-number', {'number': '3'}) }}">Draw several cards</a></li>
+        <li><a href="{{ path('deal-cards') }}">Deal cards to players</a></li>
+        <li><a href="{{ path('deck2') }}">Deck with two Jokers</a></li>
+
 </div>
 
 {% endblock %}

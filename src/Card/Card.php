@@ -27,7 +27,7 @@ class Card
             return '☘';
         }
         if ($col == "Joker") {
-            return '🤡';
+            return '👹';
         }
         return '?';
     }
