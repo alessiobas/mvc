@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game 21 documentation{% endblock %}
+
+{% block content %}
+<div class="deck">
+<h2>Flowchart</h2>
+<img src="../img/flowchart.png" width="650px" lenght="420px" alt="flowchart">
+<h2>Psuedocode</h2>
+<img src="../img/psuedocode.png" width="650px" lenght="420px" alt="psuedocode">
+<h2>Classes</h2>
+<p class="classes-doc">
+Class Card: Sets the base for a card<br>
+Class Deck: Creates a deck with cards values and colors<br>
+Class Player: Contains players<br>
+Class Game: Hand out cards to players, counts and compairs score of players
+</p>
+
+<a href="{{ path("game") }}">Game home</a><br>
+
+</div>
+
+{% endblock %}
