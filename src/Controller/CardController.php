@@ -142,8 +142,6 @@ class CardController extends AbstractController
     {
         $newDeck = new \App\Card\DeckWith2Jokers();
         $newDeck->fillDeckWithJokers();
-        // $newDeck->addACard(new \App\Card\Card("Joker", "Joker"));
-        // $newDeck->addACard(new \App\Card\Card("Joker", "Joker"));
         $data = [
             "title" => "Show deck with Jokers",
             "deck" => $newDeck->deck,
