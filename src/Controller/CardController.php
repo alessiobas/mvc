@@ -140,10 +140,10 @@ class CardController extends AbstractController
      */
     public function deck2(): Response
     {
-        $newDeck = new \App\Card\Deck();
-        $newDeck->fillDeck();
-        $newDeck->addACard(new \App\Card\Card("Joker", "Joker"));
-        $newDeck->addACard(new \App\Card\Card("Joker", "Joker"));
+        $newDeck = new \App\Card\DeckWith2Jokers();
+        $newDeck->fillDeckWithJokers();
+        // $newDeck->addACard(new \App\Card\Card("Joker", "Joker"));
+        // $newDeck->addACard(new \App\Card\Card("Joker", "Joker"));
         $data = [
             "title" => "Show deck with Jokers",
             "deck" => $newDeck->deck,
