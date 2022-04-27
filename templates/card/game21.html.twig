@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game 21{% endblock %}
+
+{% block content %}
+
+<div class="deck">
+<h2>Game 21</h2>
+    {% for cards in playerHand %} {# CHANGE Loop through cards in player hand #}
+    <div class="deck">
+    <h2>Player</h2>
+    {% for card in cards %} {# CHANGE Loop through each card in cards #}
+        <div class="card">
+            {{ card.value }}
+            {{ card.color }}
+        </div>
+    {% endfor %}
+    {% endfor %}
+</div>
+    {% for cards in bankHand %} {# CHANGE Loop through cards in bank hand #}
+    <div class="deck">
+    <h2>Bank</h2>
+    {% for card in cards %} {# CHANGE Loop through each card in cards #}
+        <div class="card">
+            {{ card.value }}
+            {{ card.color }}
+        </div>
+    {% endfor %}
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}

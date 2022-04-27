@@ -26,4 +26,12 @@ class GameController extends AbstractController
     {
         return $this->render('card/doc.html.twig');
     }
+
+    /**
+     * @Route("/game21", name="game21")
+     */
+    public function game21(SessionInterface $session): Response
+    {
+        return $this->render('card/game21.html.twig');
+    }
 }
