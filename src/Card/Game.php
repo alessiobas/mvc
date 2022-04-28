@@ -48,7 +48,7 @@ class Game
         return $score;
     }
 
-    public function nextRound()
+    public function newRound()
     {
         $this->playerScore = 0;
         $this->bankScore = 0;

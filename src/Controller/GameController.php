@@ -32,6 +32,19 @@ class GameController extends AbstractController
      */
     public function game21(SessionInterface $session): Response
     {
-        return $this->render('card/game21.html.twig');
+        $game = new \App\Card\Game(0, 0);
+        $game = $session->get("game") ?? new \App\Card\Game();
+        $turn = $session->get("turn") ?? 0;
+        $session->set("game", $game);
+        $session->set("turn", $turn);
+        $data = [
+            "title" => "Game 21 playing",
+            "playerHand" => $game->player->hand,
+            "bankHand" => $game->bank->hand,
+            "playerScore" => $game->playerScore,
+            "bankScore" => $game->bankScore,
+            "turn" => $turn
+        ];
+        return $this->render('card/game21.html.twig', $data);
     }
 }

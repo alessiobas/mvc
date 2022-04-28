@@ -13,9 +13,31 @@
         <div class="card">
             {{ card.value }}
             {{ card.color }}
+            {% if card.key == 14 %}
+                <form method="post">
+                    <input type="text" name="change14" value="1" hidden>
+                    <button name="subject" type="submit" value="HTML">Change to value 1</button>
+                </form>
+            {% endif %}
         </div>
     {% endfor %}
     {% endfor %}
+      {# {% if turn == 0 %} #}
+  <form method="post">
+    <input type="text" name="user" value="1" hidden>
+    <button name="subject" type="submit" value="HTML">Draw card</button>
+  </form>
+  <form method="post">
+    <input type="text" name="user" value="2" hidden>
+    <button name="subject" type="submit" value="HTML">Finish round</button>
+  </form>
+  {# {% endif %} #}
+  {# {% if turn == 3 %} #}
+  <form method="post">
+    <input type="text" name="user" value="3" hidden>
+    <button name="subject" type="submit" value="HTML">Next round</button>
+  </form>
+{# {% endif %} #}
 </div>
     {% for cards in bankHand %} {# CHANGE Loop through cards in bank hand #}
     <div class="deck">
@@ -28,6 +50,9 @@
     {% endfor %}
     {% endfor %}
 </div>
+Player score: {{playerScore}} <br>
+Bank score: {{bankScore}} <br>
+
 </div>
 
 {% endblock %}
