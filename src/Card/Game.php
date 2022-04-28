@@ -55,4 +55,36 @@ class Game
         $this->player->hand = null;
         $this->computer->hand = null;
     }
+
+    public function checkWinner()
+    {
+        if ($this->playerScore > 21) {
+            return "Bank wins";
+        } elseif ($this->bankScore > 21) {
+            return "Player wins";
+        } elseif ($this->bankScore < $this->playerScore) {
+            return "Player wins";
+        } elseif ($this->bankScore == $this->playerScore) {
+            return "Bank wins";
+        } else {
+            return "Continue";
+        }
+    }
+
+    public function playPlayer()
+    {
+        self::takeCardPlayer();
+        $this->playerScore = self::score($this->player);
+        $res = self::checkWinner();
+        if ($result == "Bank wins" || $result == "Player wins") {
+            return 3;
+        }
+        return null;
+    }
+
+    public function playBank()
+    {
+        self::cardToBank();
+        self::checkWinner();
+    }
 }
