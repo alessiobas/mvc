@@ -10,4 +10,9 @@ class Player
     {
         $this->hand = $hand;
     }
+
+    public function handArray($hand)
+    {
+        $this->hand[] = $hand;
+    }
 }
