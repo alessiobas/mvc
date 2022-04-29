@@ -10,7 +10,21 @@
     {% for cards in playerHand %}
     {% for card in cards %}
         <div class="card">
-            {{ card.value }}
+        {% if card.value == 11 %}
+        J
+        {% endif %}
+        {% if card.value == 12 %}
+        D
+        {% endif %}
+        {% if card.value == 13 %}
+        K
+        {% endif %}
+        {% if card.value == 14 %}
+        A
+        {% endif %}
+        {% if card.value <= 10 %}
+        {{ card.value }}
+        {% endif %}
             {{ card.color }}
         </div>
             {% if card.value == 14 and finished == false %}
@@ -25,7 +39,21 @@
     {% for cards in bankHand %}
     {% for card in cards %}
         <div class="card">
-            {{ card.value }}
+        {% if card.value == 11 %}
+        J
+        {% endif %}
+        {% if card.value == 12 %}
+        D
+        {% endif %}
+        {% if card.value == 13 %}
+        K
+        {% endif %}
+        {% if card.value == 14 %}
+        A
+        {% endif %}
+        {% if card.value <= 10 %}
+        {{ card.value }}
+        {% endif %}
             {{ card.color }}
         </div>
     {% endfor %}

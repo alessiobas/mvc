@@ -66,7 +66,7 @@ class GameController extends AbstractController
         if ($action == "2") {
             $game->playBank();
             $session->set("finished", true);
-            $res = $game->checkWinner();
+            // $res = $game->checkWinner();
         }
 
         if ($action == "3") {

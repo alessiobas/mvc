@@ -79,11 +79,6 @@ class Game
     {
         self::takeCard($this->player);
         $this->playerScore = self::score($this->player);
-        // $res = self::checkWinner();
-        // if ($res == "Bank wins" || $res == "Player wins") {
-        //     return 4;
-        // }
-        // return null;
     }
 
     public function playBank()

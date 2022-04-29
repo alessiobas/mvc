@@ -10,7 +10,6 @@ class Card
     {
         $this->value = $value;
         $this->color = $this->symbol($color);
-        // $this->realValue = $realValue;
         $this->cardsUsed = $cardsUsed;
     }
 
