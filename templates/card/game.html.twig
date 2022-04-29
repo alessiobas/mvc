@@ -5,11 +5,15 @@
 {% block content %}
 <div class="deck">
 <h2>Game 21</h2>
-<p>
+{# <p>
 Tjugoett är ett kortspel som är den svenska motsvarigheten till det internationellt spridda kortspelet Black Jack. De viktigaste skillnaderna mellan dessa två spel är dels kortens värde, dels att bankiren i tjugoett spelar mot en spelare i taget och inte som i Black Jack mot alla på en gång.
-</p>
+</p> #}
 <p>
-Spelets idé är att med två eller flera kort försöka uppnå det sammanlagda värdet 21, eller komma så nära som möjligt utan att överskrida 21. Essen är värda valfritt 1 eller 14, kungarna 13, damerna 12, knektarna 11. Nummerkorten har samma värden som valören. 
+Spelets idé är att med två eller flera kort försöka uppnå det sammanlagda värdet 21, eller komma så nära som möjligt utan att överskrida 21. Essen är värda valfritt 1 eller 14 (byt från 14 till 1 genom att trycka på "Change Ace to 1" om du får ett ess), kungarna 13, damerna 12, knektarna 11. Nummerkorten har samma värden som valören. Om spelaren går över 21 kommer banken vinna oavsett bankens poäng.
+</p>
+
+<p>
+Spelaren börjar spela och trycker "Draw card" för att dra ett kort i taget. När spelaren vill stanna (eller kommit över 21 poäng) tryck "Finish round" för att skicka över turen till banken. När banken dragit kort visas vinnaren. Tryck "New round" för att starta en ny omgång.
 </p>
 
 <a href="{{ path("game21") }}">Start game</a><br>

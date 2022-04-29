@@ -6,53 +6,54 @@
 
 <div class="deck">
 <h2>Game 21</h2>
-    {% for cards in playerHand %} {# CHANGE Loop through cards in player hand #}
-    <div class="deck">
     <h2>Player</h2>
-    {% for card in cards %} {# CHANGE Loop through each card in cards #}
+    {% for cards in playerHand %}
+    {% for card in cards %}
         <div class="card">
             {{ card.value }}
             {{ card.color }}
-            {% if card.key == 14 %}
+        </div>
+            {% if card.value == 14 and finished == false %}
                 <form method="post">
-                    <input type="text" name="change14" value="1" hidden>
-                    <button name="subject" type="submit" value="HTML">Change to value 1</button>
+                    <input type="text" name="action" value="4" hidden>
+                    <button name="subject" type="submit" value="HTML">Change Ace to value 1</button>
                 </form>
             {% endif %}
-        </div>
     {% endfor %}
     {% endfor %}
-      {# {% if turn == 0 %} #}
-  <form method="post">
-    <input type="text" name="user" value="1" hidden>
-    <button name="subject" type="submit" value="HTML">Draw card</button>
-  </form>
-  <form method="post">
-    <input type="text" name="user" value="2" hidden>
-    <button name="subject" type="submit" value="HTML">Finish round</button>
-  </form>
-  {# {% endif %} #}
-  {# {% if turn == 3 %} #}
-  <form method="post">
-    <input type="text" name="user" value="3" hidden>
-    <button name="subject" type="submit" value="HTML">Next round</button>
-  </form>
-{# {% endif %} #}
-</div>
-    {% for cards in bankHand %} {# CHANGE Loop through cards in bank hand #}
-    <div class="deck">
     <h2>Bank</h2>
-    {% for card in cards %} {# CHANGE Loop through each card in cards #}
+    {% for cards in bankHand %}
+    {% for card in cards %}
         <div class="card">
             {{ card.value }}
             {{ card.color }}
         </div>
     {% endfor %}
     {% endfor %}
-</div>
-Player score: {{playerScore}} <br>
-Bank score: {{bankScore}} <br>
+<div class="choices">
+      {% if finished == false and playerScore < 21 %}
+  <form method="post">
+    <input type="text" name="action" value="1" hidden>
+    <button name="subject" type="submit" value="HTML">Draw card</button>
+  </form>
+  {% endif %}
+  {% if finished == false %}
+  <form method="post">
+    <input type="text" name="action" value="2" hidden>
+    <button name="subject" type="submit" value="HTML">Finish round</button>
+  </form>
+  {% endif %}
+  {% if finished == true %}
+  <form method="post">
+    <input type="text" name="action" value="3" hidden>
+    <button name="subject" type="submit" value="HTML">New round</button>
+  </form>
+{% endif %}
 
+<p>Player score: {{playerScore}} <br></p>
+<p>Bank score: {{bankScore}} <br></p>
+<h2>Winner: {{result}}</h2>
+</div>
 </div>
 
 {% endblock %}

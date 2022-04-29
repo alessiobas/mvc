@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class GameController extends AbstractController
 {
@@ -28,23 +29,57 @@ class GameController extends AbstractController
     }
 
     /**
-     * @Route("/game21", name="game21")
+     * @Route("/game21", name="game21", methods={"GET", "HEAD"})
      */
     public function game21(SessionInterface $session): Response
     {
-        $game = new \App\Card\Game(0, 0);
+        $game = new \App\Card\Game();
         $game = $session->get("game") ?? new \App\Card\Game();
-        $turn = $session->get("turn") ?? 0;
+        $finished = $session->get("finished") ?? false;
         $session->set("game", $game);
-        $session->set("turn", $turn);
+        $session->set("finished", $finished);
         $data = [
             "title" => "Game 21 playing",
             "playerHand" => $game->player->hand,
             "bankHand" => $game->bank->hand,
             "playerScore" => $game->playerScore,
             "bankScore" => $game->bankScore,
-            "turn" => $turn
+            "finished" => $finished,
+            "result" => $game->res
         ];
         return $this->render('card/game21.html.twig', $data);
+    }
+
+    /**
+     * @Route("/game21", name="game21-process", methods={"POST"})
+     */
+    public function game21Process(SessionInterface $session, Request $request): Response
+    {
+        $game = $session->get("game");
+        $turn = $session->get("finished");
+        $action = $request->request->get("action");
+
+        if ($action == "1") {
+            $game->playPlayer();
+        }
+
+        if ($action == "2") {
+            $game->playBank();
+            $session->set("finished", true);
+            $res = $game->checkWinner();
+        }
+
+        if ($action == "3") {
+            $game->newRound();
+            $action = "0";
+            $session->clear();
+        }
+
+        if ($action == "4") {
+            $game->playerScore = $game->playerScore - 13;
+            $action = "0";
+        }
+
+        return $this->redirectToRoute('game21');
     }
 }

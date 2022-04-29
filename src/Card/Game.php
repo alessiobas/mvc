@@ -9,8 +9,9 @@ class Game
     public $deck;
     public $player;
     public $bank;
+    public $res;
 
-    public function __construct(int $playerScore, int $bankScore)
+    public function __construct(int $playerScore = 0, int $bankScore = 0)
     {
         $this->deck = new \App\Card\Deck();
         $this->player = new \App\Card\Player([]);
@@ -21,18 +22,17 @@ class Game
         $this->deck->shuffle();
     }
 
-    public function takeCardPlayer() // Kanske inte fungerar...
+    public function takeCard(player $thePlayer) // Kanske inte fungerar...
     {
         // $hand = $this->deck->drawCard(1)
         $drawnCard = $this->deck->drawCard(1);
-        $this->player->handArray($drawnCard);
+        $thePlayer->handArray($drawnCard);
     }
 
     private function cardToBank()
     {
         while ($this->bankScore <= 17) {
-            $drawnCard = $this->deck->drawCard(1);
-            $this->bank->handArray($drawnCard);
+            self::takeCard($this->bank);
             $this->bankScore = self::score($this->bank);
         }
     }
@@ -40,9 +40,9 @@ class Game
     protected function score(object $player)
     {
         $score = 0;
-        foreach ($player->hand as $card) {
-            foreach ($card as $value) {
-                $score += $value->key;
+        foreach ($player->hand as &$card) {
+            foreach ($card as &$val) {
+                $score += $val->value;
             }
         }
         return $score;
@@ -53,33 +53,37 @@ class Game
         $this->playerScore = 0;
         $this->bankScore = 0;
         $this->player->hand = null;
-        $this->computer->hand = null;
+        $this->bank->hand = null;
     }
 
     public function checkWinner()
     {
+        $this->res = "-";
         if ($this->playerScore > 21) {
-            return "Bank wins";
+            $this->res = "Bank wins";
         } elseif ($this->bankScore > 21) {
-            return "Player wins";
+            $this->res = "Player wins";
         } elseif ($this->bankScore < $this->playerScore) {
-            return "Player wins";
+            $this->res = "Player wins";
         } elseif ($this->bankScore == $this->playerScore) {
-            return "Bank wins";
+            $this->res = "Bank wins";
+        } elseif ($this->bankScore > $this->playerScore) {
+            $this->res = "Bank wins";
         } else {
-            return "Continue";
+            $this->res = "Continue";
         }
+        return $this->res;
     }
 
     public function playPlayer()
     {
-        self::takeCardPlayer();
+        self::takeCard($this->player);
         $this->playerScore = self::score($this->player);
-        $res = self::checkWinner();
-        if ($result == "Bank wins" || $result == "Player wins") {
-            return 3;
-        }
-        return null;
+        // $res = self::checkWinner();
+        // if ($res == "Bank wins" || $res == "Player wins") {
+        //     return 4;
+        // }
+        // return null;
     }
 
     public function playBank()

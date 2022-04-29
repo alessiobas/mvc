@@ -20,11 +20,14 @@ class Deck
     public function fillDeck()
     {
         $colors = ["Hearts", "Diamonds", "Spades", "Clubs"];
-        $values = [2 => "2", 3 => "3", 4 => "4", 5 => "5", 6 => "6", 7 => "7", 8 => "8", 9 => "9", 10 => "10", 11 => "J", 12 => "Q", 13 => "K", 14 => "A"];
+        // $values = [2 => "2", 3 => "3", 4 => "4", 5 => "5", 6 => "6", 7 => "7", 8 => "8", 9 => "9", 10 => "10", 11 => "J", 12 => "Q", 13 => "K", 14 => "A"];
+        $values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
         foreach ($colors as &$color) {
-            foreach ($values as &$value) {
-                self::addACard(new \App\Card\Card($value, $color));
-            }
+            // foreach ($realValues as &$realValue) {
+                foreach ($values as &$value) {
+                    self::addACard(new \App\Card\Card($value, $color));
+                }
+            // }
         }
     }
 
