@@ -22,9 +22,8 @@ class Game
         $this->deck->shuffle();
     }
 
-    public function takeCard(player $thePlayer) // Kanske inte fungerar...
+    public function takeCard(player $thePlayer)
     {
-        // $hand = $this->deck->drawCard(1)
         $drawnCard = $this->deck->drawCard(1);
         $thePlayer->handArray($drawnCard);
     }
