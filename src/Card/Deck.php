@@ -24,9 +24,9 @@ class Deck
         $values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
         foreach ($colors as &$color) {
             // foreach ($realValues as &$realValue) {
-                foreach ($values as &$value) {
-                    self::addACard(new \App\Card\Card($value, $color));
-                }
+            foreach ($values as &$value) {
+                self::addACard(new \App\Card\Card($value, $color));
+            }
             // }
         }
     }
