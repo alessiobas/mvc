@@ -1,2 +1,22 @@
 Kmom03
 -------------
+
+
+#### Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. Var det något som du tror stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?
+Jag tyckte det kändes bra att modellera kortspelet med flödesdiagram och psuedokod. Jag upplevde att jag då kunde reflektera över min implementation på ett sätt som underlättade vid kodningen. Jag hade med mig modelleringen i bakhuvudet när jag faktiskt implementerade uppgiften i kod och jag kunde alltid gå tillbaka och se över psuedokoden och digrammet om jag "tappade bort mig" i kodningen. Lite likt den första delen av modelleringen i databaskursen där jag beskrev vad databasen skulle innehålla i ren text. 
+
+Mitt diagram och psuedokod var dock lite väl enkelt för att kunna luta sig tillbaka mot det till 100%. Det kändes som jag behövde tänka i andra, nyare banor när jag faktiskt kodade. Om jag hade tagit mig tiden att faktiskt skriva upp psuedokod och ett flöde för alla klasser och metoder i programmet hade de positiva aspekterna med modelleringen varit ännu mer användbara. Tänker att det till och med kan vara mer tideffektivt att lägga mer tid på modelleringen för att "spara in" tid vid kodningen. Vid en väl genomtänkt och helomfattande modelleringen hade jag nog fått till min kod ännu snabbare, även om det självklart uppstår tillfällen när jag kodar som går emot eller "ändrar" den initiala tanken av hur programmet ska struktureras.
+
+#### Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden, dina klasser och applikationen som helhet?
+Jag fortsatte helt enkelt med uppsättningen jag påbörjat under kmom02. Vid modelleringen i det första steget av uppgiften försökte jag först tänka hur implementationen skulle se ut på en "hög nivå" och göra det så enkelt som möjligt för mig själv. Mycket för att hålla det "KISS" och inte göra något svårare än det behövde vara. Detta tog jag med mig in i kodningen av uppgiften och började med att sätta upp en controller för game. Där satte jag upp Routes till de olika delarna och implementerade sedan en ny klass, Game. Denna klass hanterar själva flödet specifikt för spelet och nyttjar mina andra klasser för att fungera. Jag behöver ändra lite smått i de andra klasserna, t.ex. skapa en metod för att konsutruera en Array av spelare för att kunna sätta upp en spelare och en bank för själva kortspelet. I samband med detta satte jag även en upp templatefil för själva spelet som visualiserade det jag kodade. Jag testade mig fram mycket i denna uppgift för att få till det hela och fick bra hjälp av manueler och andra php resurser online... Det var lite klurigt att få till POST av själva processen och "fånga upp" data från sidan och använda den för att få till flödet i uppgiften. Här fick jag lite hjälp via Discord, men även tidigare exempel som visats upp av Michael..
+
+Jag är inte jättenöjd med min implementation om jag ska vara helt ärlig. Den känns väldigt basic och jag skulle kunna jobbat mer med den grafiska utformningen samt jobba in i alla fall några av de optionella kraven för att få ett bättre spel. Jag skulle kunna sätta upp en egen klass för Hand som definerar en hand med kort och utifrån det gå vidare i flödet av implementationes olika delar. Nu när implementationen är klar ser jag nog att det hade varit en fördel att sätta upp en sådan klass och även underlättat i arbetet med uppgiften. Det blev lite rörigt stundtals för mig själv vid utförandet av uppgiften. 
+
+Jag skulle även kunna rätta fler lint varningar för att öka kvaliteten på koden, men jag har uppfattat det som om vi kommer jobba vidare med det under senare kmoms så tänker att jag också kan fixa det då.
+
+
+#### Vilken är din känsla för att koda i ett ramverk som Symfony, så här långt in i kursen?
+Jag har inte jättemycket att jämföra med, men jag tycket generellt att ramerket verkar underlätta vid kodningen. Självklart kommer det med vissa begränsningar och lite att anpassa sig kring, men generellt ser jag det som positvit att jobba i Symfony under denna kurs.
+
+#### Vilken är din TIL för detta kmom?
+Psuedokod och hur det kan underlätta vid kodning att sätta upp ordentlig psuedokod inför en implementation.
