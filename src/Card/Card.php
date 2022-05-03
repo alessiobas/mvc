@@ -36,4 +36,9 @@ class Card
         }
         return '?';
     }
+
+    public function getAsString(): string
+    {
+        return "[{$this->value}{$this->color}]";
+    }
 }
