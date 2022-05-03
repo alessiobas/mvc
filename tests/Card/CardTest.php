@@ -43,5 +43,8 @@ class CardTest extends TestCase
 
         $card = new Card(10, "Clubs");
         $this->assertEquals('[10☘]', $card->getAsString());
+
+        $card = new Card(10, "XXXX");
+        $this->assertEquals('[10?]', $card->getAsString());
     }
 }
