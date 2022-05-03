@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This file contains class Card that is part of the cardgame 21
+ */
+
 namespace App\Card;
 
 use App\Controller;
