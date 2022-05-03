@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1651598975">
-  <project timestamp="1651598975">
+<coverage generated="1651600495">
+  <project timestamp="1651600495">
     <file name="/Users/AlessioBasile/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
-        <metrics complexity="7" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="16" coveredelements="0"/>
+        <metrics complexity="8" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="12" elements="18" coveredelements="14"/>
       </class>
-      <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="15" type="stmt" count="0"/>
-      <line num="16" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="0"/>
-      <line num="20" type="method" name="symbol" visibility="private" complexity="6" crap="42" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="23" type="stmt" count="0"/>
-      <line num="25" type="stmt" count="0"/>
-      <line num="26" type="stmt" count="0"/>
-      <line num="28" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <line num="31" type="stmt" count="0"/>
-      <line num="32" type="stmt" count="0"/>
+      <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="15" type="stmt" count="3"/>
+      <line num="16" type="stmt" count="3"/>
+      <line num="17" type="stmt" count="3"/>
+      <line num="20" type="method" name="symbol" visibility="private" complexity="6" crap="6.73" count="3"/>
+      <line num="22" type="stmt" count="3"/>
+      <line num="23" type="stmt" count="3"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="32" type="stmt" count="1"/>
       <line num="34" type="stmt" count="0"/>
       <line num="35" type="stmt" count="0"/>
       <line num="37" type="stmt" count="0"/>
-      <metrics loc="40" ncloc="37" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="16" coveredelements="0"/>
+      <line num="40" type="method" name="getAsString" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <metrics loc="45" ncloc="42" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="12" elements="18" coveredelements="14"/>
     </file>
     <file name="/Users/AlessioBasile/dbwebb-kurser/mvc/me/report/src/Card/Deck.php">
       <class name="App\Card\Deck" namespace="global">
@@ -438,6 +440,6 @@
       </class>
       <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="19" loc="955" ncloc="839" classes="18" methods="56" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="267" coveredstatements="2" elements="323" coveredelements="4"/>
+    <metrics files="19" loc="960" ncloc="844" classes="18" methods="57" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="268" coveredstatements="14" elements="325" coveredelements="18"/>
   </project>
 </coverage>
