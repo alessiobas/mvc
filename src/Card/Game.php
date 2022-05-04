@@ -4,6 +4,9 @@ namespace App\Card;
 
 use App\Controller;
 
+/**
+ * Game class to initiate game 21
+ */
 class Game
 {
     public $deck;
@@ -11,6 +14,11 @@ class Game
     public $bank;
     public $res;
 
+    /**
+     * Constructs Game
+     * @param int $playerScore default 0
+     * @param int $bankScore default 0
+     */
     public function __construct(int $playerScore = 0, int $bankScore = 0)
     {
         $this->deck = new \App\Card\Deck();
@@ -22,12 +30,19 @@ class Game
         $this->deck->shuffle();
     }
 
+    /**
+     * Method for player or bank to take a card from the deck
+     * @param object $thePlayer which player is taking a card
+     */
     public function takeCard(player $thePlayer)
     {
         $drawnCard = $this->deck->drawCard(1);
         $thePlayer->handArray($drawnCard);
     }
 
+    /**
+     * Private method to give the bank cards until $bankScore is less or equal to 17
+     */
     private function cardToBank()
     {
         while ($this->bankScore <= 17) {
@@ -36,6 +51,11 @@ class Game
         }
     }
 
+    /**
+     * Protected method to count score
+     * @param object $player which players score should be counted
+     * @return int total score of player
+     */
     protected function score(object $player)
     {
         $score = 0;
@@ -47,6 +67,10 @@ class Game
         return $score;
     }
 
+    /**
+     * Method to initiate a new round of game 21.
+     * Resets players score and hands
+     */
     public function newRound()
     {
         $this->playerScore = 0;
@@ -55,6 +79,10 @@ class Game
         $this->bank->hand = null;
     }
 
+    /**
+     * Method to check who won the game
+     * @return string winner
+     */
     public function checkWinner()
     {
         $this->res = "-";
@@ -74,12 +102,18 @@ class Game
         return $this->res;
     }
 
+    /**
+     * Method to play as Player. Draws a card and counts player score
+     */
     public function playPlayer()
     {
         self::takeCard($this->player);
         $this->playerScore = self::score($this->player);
     }
 
+    /**
+     * Method for bank to play. Draws cards for bank and tells who won.
+     */
     public function playBank()
     {
         self::cardToBank();

@@ -4,19 +4,33 @@ namespace App\Card;
 
 use App\Controller;
 
+/**
+ * Deck class to create a deck of cards
+ */
 class Deck
 {
     public $deck;
+
+    /**
+     * Constructs the deck array
+     */
     public function __construct()
     {
         $this->deck = array();
     }
 
+    /**
+     * Method to add a card to deck
+     * @param object $card which card to add
+     */
     public function addACard($Card)
     {
         $this->deck[] = $Card;
     }
 
+    /**
+     * Method to fill deck with cards with help from Card class
+     */
     public function fillDeck()
     {
         $colors = ["Hearts", "Diamonds", "Spades", "Clubs"];
@@ -31,11 +45,19 @@ class Deck
         }
     }
 
+    /**
+     * Method to shuffle deck
+     */
     public function shuffle()
     {
         shuffle($this->deck);
     }
 
+    /**
+     * Method to draw card from deck
+     * @param int $no number of cards to draw (1 as default)
+     * @return array $hand cards in hand
+     */
     public function drawCard($no = 1)
     {
         $hand = [];
