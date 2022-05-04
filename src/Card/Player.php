@@ -20,7 +20,7 @@ class Player
 
     /**
      * Method to push param to hand array
-     * @param array $hand 
+     * @param array $hand
      */
     public function handArray($hand)
     {
