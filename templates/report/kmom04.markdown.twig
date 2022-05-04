@@ -1,2 +1,19 @@
 Kmom04
 ---------------
+#### Berätta hur du upplevde att skriva kod som testar annan kod med PHPUnit och hur du upplever phpunit rent allmänt.
+Jag tyckte det kändes ganska naturligt. Jag har redan i oopython kursen skrivit tester för att testa objektorienterad kod och är familjär med unittester från den kursen. Att skriva kod som testar annan kod känns nästan som ett måste vid programmering av dessa typer av program som vi arbetar med i mvc kursen. Ändras något i koden vill jag kunna köra testerna för att se så allt fortfarande fungerar. Om koden är välskriven på ett objektorienterat sätt samtidigt som testerna testar koddelarna tillräckligt bra, kan jag ändra i koden utan att oroa mig för mycket att jag riskerar förstöra delar eller flöden av mitt program. phpunit kändes väldigt användbart och användarvänligt. Tyckte det var lätt att ta sig till hur det fungerade och skriva phpunit tester på ett smidigt sätt.
+
+#### Hur väl lyckades du med kodtäckningen av din kod, lyckades du nå mer än 90% kodtäckning?
+Jag tyckte jag lyckades väl med själva kodtäckningen. Jag implementerade tester för mina modeller och lyckades i kategorin "Lines" samt "Functions and Methods" nå över 90% kodtäckning. Gällande "Classes and Traits" nådde jag 60% kodtäckning. Dock fick jag erfara att kodtäckning inte berättar hela historien om hur väl koden testas. När jag t.ex. använde metoder i en annan metod och skrev ett test för metoden som inkluderar den andra metoden, så togs även den "otestade" metoden med i kodtäckningen. Det utan att jag egentligen skrivit ett eget test för den metoden. Kodtäckning säger alltså nödvändigtvis inte hur bra tester som skrivits, utan endast om raderna inkluderas vid något test eller inte.
+
+#### Upplever du din egen kod som “testbar kod” eller finns det delar i koden som är mer eller mindre testbar och finns det saker som kan göras för att förbättra kodens testbarhet?
+Jag upplevde majoriteten av min kod i modellerna som testbar. Om jag ser till vyerna och controllerna tänker jag att det kan vara svårare att skriva bra tester för dessa moduler. Ett exempel där jag antagligen skulle kunna skriva om koden eller testet är i mitt test för shufflefunktionen i deck klassen. Jag jämför då om värdet och färgen är samma innan och efter shuffle och det finns en sannolikhet att kortleken blandas och samma kort hamnar på samma plats genom inbyggd shuffle. Dock jämför jag både värde och färg vilket gör den sannolikheten lägre än att t.ex. bara testa värdet.
+
+#### Valde du att skriva om delar av din kod för att förbättra den eller göra den mer testbar, om så berätta lite hur du tänkte.
+Jag la till en metod i Card klassen för att få ut värdet och färgen som en sträng. Detta för att kunna skriva bättre tester och göra korten mer jämförbara vid olika tester. Det hjälpte mig bra vid testningen. Annars lade jag till DocBlock kommentarer i mina modeller för att kunna få ut dokumentation och göra det tydligare vad metoden gör och vad argumenten som skickas in faktiskt är.
+
+#### Fundera över om du anser att testbar kod är något som kan identifiera “snygg och ren kod”.
+Jag anser att kod som är testbar är snyggare och renare än kod som inte är testbar. Att kunna skriva tester på kod är inte bara viktigt för ens egna skull, utan även för andra intressenter eller teammedlemmar som också kommer använda koden på olika sätt. Att skriva tester till kod tänker jag "tvingar" programmeraren att tänka på sin kod ur ett annat perspektiv, vilket i sin tur också kan leda till "bättre" kod. Om jag inte förhåller mig till koden på något annat sätt än att bara skriva den för att få programmet att fungera kan det i många fall bli otydligt och sämre kod, men när, i detta fall tester, skrivs för kod tvingar det mig att skriva tydligare kod.
+
+#### Vilken är din TIL för detta kmom?
+Phpunit tests och hur jag skriver unittester för PHP kod.
