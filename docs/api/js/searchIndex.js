@@ -3,18 +3,23 @@ Search.appendIndex(
                 {
             "fqsen": "\\App\\Card\\Card",
             "name": "Card",
-            "summary": "",
+            "summary": "Card\u0020class\u0020which\u0020creates\u0020a\u0020card",
             "url": "classes/App-Card-Card.html"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructs\u0020Card",
             "url": "classes/App-Card-Card.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003Asymbol\u0028\u0029",
             "name": "symbol",
-            "summary": "",
+            "summary": "Private\u0020method\u0020that\u0020changes\u0020color\u0020to\u0020symbol\u0020based\u0020on\u0020color\u0020string\u0020value",
             "url": "classes/App-Card-Card.html#method_symbol"
+        },                {
+            "fqsen": "\\App\\Card\\Card\u003A\u003AgetAsString\u0028\u0029",
+            "name": "getAsString",
+            "summary": "Method\u0020to\u0020get\u0020card\u0020value\u0020and\u0020color\u0020symbol\u0020as\u0020string.\u0020Used\u0020for\u0020tests",
+            "url": "classes/App-Card-Card.html#method_getAsString"
         },                {
             "fqsen": "\\App\\Card\\Deck",
             "name": "Deck",
