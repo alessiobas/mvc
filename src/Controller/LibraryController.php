@@ -27,7 +27,11 @@ class LibraryController extends AbstractController
         $books = $libraryRepository
             ->findAll();
 
-        return $this->json($products);
+            $data = [
+                "books" => $books
+            ];
+
+        return $this->render('library/show-books.html.twig', $data);
     }
 
 }
