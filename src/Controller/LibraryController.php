@@ -68,16 +68,16 @@ class LibraryController extends AbstractController
     ): Response {
         $entityManager = $doctrine->getManager();
 
-        $title = $request->request->get("title");
-        $author = $request->request->get("author");
-        $isbn = $request->request->get("isbn");
-        $imgUrl = $request->request->get("imageUrl");
+        $title_ = $request->request->get("_title");
+        $author_ = $request->request->get("_author");
+        $isbn_ = $request->request->get("_isbn");
+        $imgUrl_ = $request->request->get("_imageUrl");
 
         $books = new Library();
-        $books->setTitle($title);
-        $books->setAuthor($author);
-        $books->setIsbn($isbn);
-        $books->setImage($imgUrl);
+        $books->setTitle($title_);
+        $books->setAuthor($author_);
+        $books->setIsbn($isbn_);
+        $books->setImage($imgUrl_);
 
         // tell Doctrine you want to (eventually) save the Product
         // (no queries yet)
@@ -116,19 +116,19 @@ class LibraryController extends AbstractController
     ): Response {
         $entityManager = $doctrine->getManager();
 
-        $id = $request->request->get("id");
-        $title = $request->request->get("title");
-        $author = $request->request->get("author");
-        $isbn = $request->request->get("isbn");
-        $imgUrl = $request->request->get("imageUrl");
+        $id_ = $request->request->get("_id");
+        $title_ = $request->request->get("_title");
+        $author_ = $request->request->get("_author");
+        $isbn_ = $request->request->get("_isbn");
+        $imgUrl_ = $request->request->get("_imageUrl");
 
         $books = $libraryRepository
-            ->find($id);
+            ->find($id_);
         ;
-        $books->setTitle($title);
-        $books->setAuthor($author);
-        $books->setIsbn($isbn);
-        $books->setImage($imgUrl);
+        $books->setTitle($title_);
+        $books->setAuthor($author_);
+        $books->setIsbn($isbn_);
+        $books->setImage($imgUrl_);
 
         // tell Doctrine you want to (eventually) save the Product
         // (no queries yet)
