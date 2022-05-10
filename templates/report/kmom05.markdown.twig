@@ -1,2 +1,18 @@
 Kmom05
 ---------
+#### Gick det bra att jobba igenom övningen med Symfony och Doctrine. Något särskilt du tänkte/reagerade på under övningen?
+Det var en bra övning som inte bara guidade mig genom nödvändiga steg för att komma igång med Symfony och Doctrine, utan gav även debug verktyg och exempel på CRUD routs vilket hjälpte vid utförande av själva uppgiften. Jag fann det lite oklart hur databasen hanteras om jag vill lägga till nya tabeller och/eller ta bort gamla tabeller, men lyckades förstå mig på det genom kommandon för att få upp tabeller osv tillsammans med debug verktygen. Inget annat speciellt jag reagerade på, men schysst att ge oss CRUD routes till controllen för att komma igång :)
+
+#### Berätta om din applikation och hur du tänkte när du byggde upp den. Tänkte du något speciellt på användargränssnittet? Gick det bra att jobba med ORM i CRUD eller vad anser du om det?
+Jag ville skapa appen på ett sätt som gör det så enkelt som möjligt för avnändaren att se innehållet i databasen på ett simpelt vis, samtidigt som jag ville att programmets funktioner, CRUD, enkelt skulle kunna användas för att modifiera, lägga till eller ta bort data ur dbn. Jag började helt enkelt uppifrån och ned i uppgiftens krav och implementerade en del efter en. Det enda "hoppet" jag gjorde i kraven var att jag började med att sätta upp sidor för show, både en och alla böcker i biblioteket. Jag skapade processer för att hantera POST vid skapande av ny bok och uppdatering av befintlig bok. Delete gjorde jag likt övningen, vilket fungerade bra i detta fall då jag vill att användaren behöver ta bort all info om boken om användaren väljer att radera en bok. Ett förbättringsområde är att styra användaren så denne inte kan lägga till ofullständig info om boken. Nu går det t.ex. att endast lägga till boktitel utan att fylla i resterande fält i formuläret för att skapa en bok. 
+
+Jag tyckte det gick suveränt att jobba med ORM i CRUD och tycker det fungerar mycket smidigt och göra att jag kan fokusera på programmering av programmet och inte behöva tänka lika mycket på databaskodningen! Självklart får jag lite mindre kontroll och behöver förlita mig på ORM, men för just denna uppgift passade det utmärkt. Jag jobbade med sqlite3 vilket gick smidigt. Dock är det självklart annorlunda "på riktigt" då lokala dbn och prod dbn inte nödvändigtvis ser likadana ut... 
+
+#### Berätta om du gjorde (delar av) extrauppgiften med användare och login.
+Jag fokuserade inte på de optionella extrauppgifterna under detta kmom... 
+
+#### Vad är din uppfattning om ORM så här långt och relatera gärna till andra sätt att jobba med applikationskod mot databaser?
+Min uppfattning är att det är ett smidigt verktyg som låter mig som programmerare fokusera på programkod och inte foksuera på att sätta upp en databas. Jämfört med databaskursen där jag har tidigare erfarenhet från databaser så skulle jag vilka påstå att ORM passar sig bra när mindre data ska in och ut från en databas, men om datamängden blir större och det finns kopplingar etc mellan tabeller och data, så anser jag att det är bättre att sätta upp databasen själv för att ha kontroll över databasen och dess innehåll samt kopplingar etc. Det kan kännas lite väl "magiskt" med ORM vilket ger mig en känsla av mindre kontroll framförallt!
+
+#### Vilken är din TIL för detta kmom?
+ORM och CRUD! 
