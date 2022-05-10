@@ -16,7 +16,7 @@ class Library
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $titel;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $isbn;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
@@ -42,12 +42,12 @@ class Library
         return $this;
     }
 
-    public function getIsbn(): ?int
+    public function getIsbn(): ?string
     {
         return $this->isbn;
     }
 
-    public function setIsbn(int $isbn): self
+    public function setIsbn(?string $isbn): self
     {
         $this->isbn = $isbn;
 
