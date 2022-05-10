@@ -2,13 +2,15 @@
 
 namespace App\Controller;
 
+use App\Controller;
 use App\Repository\LibraryRepository;
 use App\Entity\Library;
 use Doctrine\Persistence\ManagerRegistry;
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class LibraryController extends AbstractController
 {
@@ -74,7 +76,7 @@ class LibraryController extends AbstractController
         $imgUrl_ = $request->request->get("_imageUrl");
 
         $books = new Library();
-        $books->setTitle($title_);
+        $books->setTitel($title_);
         $books->setAuthor($author_);
         $books->setIsbn($isbn_);
         $books->setImage($imgUrl_);
@@ -125,7 +127,7 @@ class LibraryController extends AbstractController
         $books = $libraryRepository
             ->find($id_);
         ;
-        $books->setTitle($title_);
+        $books->setTitel($title_);
         $books->setAuthor($author_);
         $books->setIsbn($isbn_);
         $books->setImage($imgUrl_);
