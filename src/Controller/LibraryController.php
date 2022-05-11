@@ -11,7 +11,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
-
 class LibraryController extends AbstractController
 {
     #[Route('/library', name: 'app_library')]
@@ -35,7 +34,7 @@ class LibraryController extends AbstractController
                 "books" => $books
             ];
 
-        return $this->render('library/show-books.html.twig', $data);
+            return $this->render('library/show-books.html.twig', $data);
     }
 
     /**
@@ -154,7 +153,7 @@ class LibraryController extends AbstractController
 
         if (!$book) {
             throw $this->createNotFoundException(
-                'No book found for id '.$id
+                'No book found for id ' . $id
             );
         }
 
@@ -163,6 +162,4 @@ class LibraryController extends AbstractController
 
         return $this->redirectToRoute('library_show_all');
     }
-
-
 }
