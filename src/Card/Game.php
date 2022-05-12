@@ -9,6 +9,12 @@ use App\Controller;
  */
 class Game
 {
+    /**
+     * @var object $deck Deck to be used in game
+     * @var object $player Player (user)
+     * @var object $bank Bank (computer)
+     * @var string $res Result of the game
+     */
     public $deck;
     public $player;
     public $bank;
