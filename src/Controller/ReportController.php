@@ -60,4 +60,12 @@ class ReportController extends AbstractController
 
         return $this->render('debug.html.twig', $data);
     }
+
+    /**
+     * @Route("/metrics", name="metrics")
+     */
+    public function metrics(): Response
+    {
+        return $this->render('metrics/metrics.html.twig');
+    }
 }
