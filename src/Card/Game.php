@@ -94,14 +94,11 @@ class Game
         $this->res = "Continue";
         if ($this->playerScore > 21) {
             $this->res = "Bank wins";
-        }
-        if ($this->bankScore > 21) {
+        } elseif ($this->bankScore > 21) {
             $this->res = "Player wins";
-        } 
-        if ($this->bankScore < $this->playerScore ) {
+        } elseif ($this->bankScore < $this->playerScore ) {
             $this->res = "Player wins";
-        } 
-        if ($this->bankScore == $this->playerScore || $this->bankScore > $this->playerScore) {
+        } elseif ($this->bankScore == $this->playerScore || $this->bankScore > $this->playerScore) {
             $this->res = "Bank wins";
         }
         return $this->res;
