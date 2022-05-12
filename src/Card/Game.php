@@ -91,19 +91,15 @@ class Game
      */
     public function checkWinner()
     {
-        $this->res = "-";
+        $this->res = "Continue";
         if ($this->playerScore > 21) {
             $this->res = "Bank wins";
         } elseif ($this->bankScore > 21) {
             $this->res = "Player wins";
-        } elseif ($this->bankScore < $this->playerScore) {
+        } elseif ($this->bankScore < $this->playerScore ) {
             $this->res = "Player wins";
-        } elseif ($this->bankScore == $this->playerScore) {
+        } elseif ($this->bankScore == $this->playerScore || $this->bankScore > $this->playerScore) {
             $this->res = "Bank wins";
-        } elseif ($this->bankScore > $this->playerScore) {
-            $this->res = "Bank wins";
-        } else {
-            $this->res = "Continue";
         }
         return $this->res;
     }
