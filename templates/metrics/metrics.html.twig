@@ -76,11 +76,15 @@ Skapa en ny rubrik “Förbättringar” där du väljer minst 3 förbättringar
     Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
     Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar.
 
-Jag väljer att ge mig in i Game klassen för att försöka minska komplexiteten i modellen. Valet görs för att underlätta vid vidareutveckling samt för att förska korta ned exekveringstiden i denna centrala modell. Jag tycker det är tydligast att titta i Scrutinizer för komplexiteten av denna modell som innan förbättringar ligger på 16.\
+Jag väljer att ge mig in i Game klassen för att försöka minska komplexiteten i modellen. Valet görs för att underlätta vid vidareutveckling samt för att förska korta ned exekveringstiden i denna centrala modell. Jag tycker det är tydligast att titta i Scrutinizer för komplexiteten av denna modell som innan förbättringar ligger på 16, men tittar även på phpmetrics värde för cyklisk komplexitet som är 9 och relativ system komplexitet som är 25,42. \
 \
 Vidare kommer jag försöka skriva om testerna för Gameklassen för att öka kodtäckningen och fokusera på testningen av metoden som checkar vilken spelare som vinner omgången av Game 21. Valet görs eftersom denna metod är en central del av min kod som måste fungera för att applikationen ska uppnå sitt syfte. Kodtäckningen för klassen ligger innan förbättring på 91,3% vilket är klart godkänt, men eftersom klassen är så pass central vill jag uppnå 100% kodtäckning med bra tester.\
 \
 Slutligen kommer jag ge mig på att försöka förbättra värdet för cohesion i Gamemodellen. Just nu har klassen ett cohesion värde på på 3 enligt phpmetrics vilket jag förväntar mig kunna minska för att ha en klass som har enhetligt fokus på klassens syfte i applikationen. Jag vill genomföra denna förbättring för att inte klassen ska ha metoder som inte borde finnas i klassen. Jag tror att denna förbättring kan bli svår att genomföra utan att dela upp klassen, vilket jag inför förbättringen av koden tänker att jag egentligen vill undvika eftersom jag tror att metoderna jag lagt till i Game klassen, enligt mig, faktiskt hör hemma i just den klassen, det ska bli intressant att se hur jag kan vrida och vända på metoderna för att få ner cohesion värdet.\
+\
+Efter att ha skrivit om metoden för att stämma av vilken spelare som vinner omgången där jag använder en if/elseif/else sats har jag lyckats minska klassens komplexitet i teorin. Dock fångar inte Scrutinizer eller phpmetrics upp minskningen, utan den ligger kvar på samma nivå som innan. Antar att Scrutinizer mäter mätverktygen mäter komplexiteten lite annorlunda än vi lärt oss i teorin, jag ser tydligt att jag lyckats minska antalet "beslutspunkter" i klassen och har testat koden så den fungerar som förväntat i applikationen. I övriga metoder i klassen som främst påverkar komplexiteten används i en metod en while loop för att besluta när banken ska dra ett kort (medan poängen är mindre än 17) samt en for loop för att öka antalet poäng hos spelarna. Dessa metoder lyckades jag inte skriva om och anser heller inte att det är nödvändigt då de inte är speciellt komplexa. Komplexiteten kom främst från metoden där vinneren utses, vilket jag lyckats hantera.\
+\
+
 
 
 
