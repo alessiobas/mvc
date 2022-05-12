@@ -1,0 +1,91 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Metrics{% endblock %}
+
+{% block content %}
+
+{% apply markdown_to_html %}
+
+Metrics
+=======
+
+### Introduktion
+
+Coverage\
+\
+Kodtäckning är ett mått som innefattar rader, filer, klasser och metoder som täcks av ett eller flera testfall.
+Vid hög grad av kodtäckning täcker testerna mycket av koden och visar att koden är väl testad, medan en låg grad av kodtäckning indikerar en eventuell risk att koden inte håller tillräckligt hög kvalité.\
+\
+Complexity\
+\
+Ju högre grad av komplexitetsvärde desto komplexare är koden som analyserats. Om koden har ett högt komplexitetsvärde innebär det att koden kan vara svårare att underhålla och vidareutveckla. En tecken på hög komplexitet är hur många vägval som behöver tas när koden exekveras. Kan ses som hur många intabbningar som finns klassen/modellen. Om det är många val - alltså många intabbningar, genom if/else, for och while, blir komplexiteten högre.\
+\
+Cohesion\
+\
+Cohesion beskriver hur väl metoderna i en klass är kopplade till varandra och till klassens syfte. Ett lågt cohesion värde beskriver att klassen har metoder som tydligt är sammankopplade och borde finnas med i klassen utifrån syftet med klassen. Lite förvirrande beskriver ett låg värde hög cohesion. Cohesion mäts med värdet LCOM som står för Lack of cohesion of methods.\
+
+Ett högt cohesion värde kan visa att klassen har flera ansvarsområden och borde delas upp i flera olika klasser. Vid lågt cohesion värde är cohesion hög (motsatsen mot låg cohesion värde).\
+
+Som programmerare som skriver objektorienterad kod bör programmeraren sikta på att ha ett lågt cohesionvärde där klassens metoder tydligt utför lösningar som är starkt kopplade till klassens syfte, annars bör koden delas upp i fler klasser. Att ha klasser med metoder som går i linje med klassens syfte är viktigt för att skriva testbar kod, för att ha möjlighet att underhålla och vidareutveckla koden utan att förstöra programmet eller behöva skriva om mycket kod vid uppdatering av koden.\
+\
+Coupling\
+\
+Det finns två olika mått för coupling, phpmetrics visar båda, vilka är AC och EC.\
+
+AC beskriver hur många klasser som påverkas av den aktuella klassen. Alltså utgående kopplingar.\
+EC beskriver istället hur många klasser som påverkar den aktuella klassen. Inkommande kopplingar.\
+
+Om en klass har hög AC kan det indikera på att klassen är en "huvudklass" som påverkar många andra klasser, t.ex. Game klassen i kursens uppgift. 
+
+### Phpmetrics
+Kodtäckningen väljer jag att analysera utifrån scrutinizer i nästa del av rapporten då phpmetrics inte ger mid kodtäckningsdata utan vidare konfiguration.\
+\
+Jag väljer att främst titta på den cyklomatiska komplexiteten utifrån phpmetrics rapport. Delarna av min kod med högst komplexitet enligt detta mätvärde är min Game klass, min CardController samt GameController. Gameklassen har en cyklomatisk komplexitet på 9, följt av CardControllern på 8 och 7 för GameController. Dessa delar av min kod kan komma att vara svårare att underhålla och vidareutveckla om jag vill gå tillbaka och ändra eller uppdatera min applikation. Dock har min Gameklass inte speciellt hög relativ system komplexitet, 25,42, medan controllerna ligger mellan 64-65 vilket indikerar att komplexiteten relativt till andra delar av koden inte är speciellt hög för klassen, men att den fortfarande är rätt komplex för controllerna.\
+\
+Vidare tittar jag på LCOM som mäter cohesion där jag lyckats hålla LCOM relativt lågt i de flesta delarna av min kod. Controllerna som var rätt komplexa har en cohesion på 2, vilket tyder på att metoderna i controllerna inte är så "spretiga" i sitt syfte och håller sig rätt bra till avsett syfte med controllen. Gameklassen tillsammans med ProductControllern (från övningen kmom05) sticker ut med en cohesion på 3 respektive 4. Jag väljer att inte kommentera ProductControllern vidare då den är gjord i övningssyfte, men Gameklassen har en cohesion som jag anser är för hög, men jag är inte förvånad över värdet då Gameklassen är en stor central del av programmet vi kodat under kursens gång. Värdet indikerar på att jag skulle kunna dela upp metoderna i klassen i nya klasser för att hålla metoderna sammankopplade och hålla dess syfte fokuserat på en sak per klass. Koden kan delas upp för att underlätta vid vidareutveckling, testning och underhåll.\
+\
+Gällande coupling har mina klasser/modeller ett högt värde (2-4) på Afferent coupling (AC), medan controllerna har en hög Efferent coupling (EC), vilket är helt enligt förväntan eftersom modellerna används i controllerna för att köra applikationen enligt kravspecen. Det är bra att vara medveten om dessa värden och det ger en person en uppfattning om hur koden är uppbyggd och vart "kärnan" av programmet ligger, alltså i detta fall främst i modellerna.\
+\
+Nästa mätvärde jag väljer att titta närmare på för att se vilka delar av min kod som kan skrivas om för att förbättra värden är Maintainabilty index. Det är ett värde som mäter hur lätt koden är att underhålla. Jag väljer att titta närmare på detta mätvärde eftersom det i den "verkliga världen" är som så att programmerare får leva med sin kod över tid i en mycket större utsträckning än vi som studenter behöver göra (då vi mer skickar in en uppgift och sedan är den koden "klar").\
+Klasser Dice, DiceGraphic och DiceHand har lägst Maintainabilty Index, vilket indikerar på kod som inte är lätt att underhålla. Dessa modeller kommer från en övning, så jag väljer att inte kommentera dessa vidare. Mina egenskrivna moduler ser bra ut utifrån detta mätvärde. Det som sticker ut lite är Gamecontroller, CardController och Game modellen där värdet ligger mellan 75-80 (målet för att bli "grön" enl. phpmetrics är minst 80). Dessa moduler skulle jag kunna titta närmare på vid uppdatering av koden för att göra koden lättare att underhålla över tid. När jag programmerar praktiskt i framtiden vill jag definitivt sikta på att skriva kod som är lätt att underhålla, för mig själv och för eventuella teammedlemmar som kodar tillsammans med mig.\
+\
+Slutligen väljer jag att titta på Comment Weight som mäter hur mycket av koden är kommenterad jämfört med hur mycket kod som finns totalt i modulen/klassen/metoderna. Jag tittar extra på detta då det i vissa fall kan vara bra att ha med kommentarer till applikationer för att en annan person enklare ska förstå vad kodens olika delar gör. Vissa säger att koden talar för sig själv, men jag tycker ändå det är viktigt att trycka på innebörden av välkommenterad kod, för dokumentation och för andra personer som behöver förstå koden. I CardControllern och LibraryControllern har jag en kommentarsviktning på mellan 33-36, vilket skulle kunna ökas med hjälp av kvalitativa kommentarer som beskriver vad de olika delarna gör. Nu beskriver de kommentarer som ligger vilken route delarna körs på och om det är get/post metoder, vilket säger lite, men beskriver inte nödvändigtvis vad som händer i controllern. Dock ska controllers vara "smala" med lite kod och om man behöver beskriva sina controllermetoder med kommentarer kan det till och med indikera på för mycket kod i controllern. Game-, deck- och cardmodellen har en kommentarsviktning på mellan 38-39, vilket är helt ok med tanke på att jag vet att kommenterarna avser parametrar till metoden, returns och vad metoden faktiskt gör kortfattat. Självklart kan mer utförliga kommenterarer skrivas, men jag vill inte heller ha för mycket kommentarer som "stör" läsningen av koden.
+
+
+
+### Scrutinizer
+
+Scrutinizer ger min kod en helhetsbedömning på 6.14, Satisfactory. Jag har en kodtäckning på 20% på all kod. De moduler jag själv skrivit får bra betyg och alla mina egenskrivna moduler är "gröna" vilket indikerar på ok kod enligt Scrutinizer. Det är massvis med moduler som följt med vid uppsättningen av programmet genom Symfony som har ett F i betyg, alltså underkänt. Jag kommer fokusera på koden jag själv skrivit i denna del.\
+\
+Jag har några Issues som lyfts av Scrutinizer i mina modeller. Det är problem som formuleras främst i konstruktorerna i modellerna och säger t.ex. i Card klassen att "The property value does not exist. Although not strictly required by PHP, it is generally a best practice to declare properties explicitly.". Dessa issues kan leda till buggar i koden vilket jag vill undvika.\
+\
+Kodtäckningen kan ökas genom att skriva testar på mina controllers och mina modeller som skapats i samband med uppgiften i kmom05. Utöver Controllerna och dessa modeller har jag en godkänt hög kodtäckning på mina modeller som avser Card spelet, där jag skrivit tester som innefatta en stor majoritet av mina modellers kod, 93,88% kodtäckning.\
+\
+Gällande komplexiteten väljer jag att titta närmare på en av mina mest centrala delar i Card programmet, nämligen Game klassen. Jag har en total komplexitet på 16, vilket är godkänt, men jag skulle nog kunna minska komplexiteten lite i denna klass. Den metod som får detta värde att stiga i värde är metoden som utser vilken spelare, Player eller Bank, som vinner spelet. Beroende på utfallet i spelet där Player börjar så räknas vem som vinner spelet. I GameControllern kallas metoden på för att avgöra vinnaren.\
+\
+Cohesion och coupling säger i stort samma som phpmetrics ger mig i tidigare analyserade rapport. Jag kan titta närmare och försöka dela upp Game modellen för att göra den mer testbar, lättare att vidareutveckla och underhålla över tid. Coupling ger mig beroendet från andra klasser för varje specifik klass och dessa värden ger mig liknande resultat som phpmetrics vilket är enligt förväntan. Jag får en bild över hur programmet är skrivet och kan utifrån det gå in i koden och följa "flödet" av koden och hitta vilka delar av programmet som är centrala.
+\
+Jag går vidare och kikar på Scrutinizers CRAP, Change Risk Anti Pattern, värde, vilket jämför hur många tester som är skrivna mot en del av koden mot kodens komplexitet. Ju högre CRAP score desto sämre. Jag ser direkt att jag har röda siffror som är höga i mina controllers som innefattar post processer. Det är enligt förväntan då jag inte skrivit tester för controllers. Den enda metoden i mina modeller som ligger lite i riskzonen, även om det är ett grönt score, är i min Game klass, i metoden för att checka vem som vunnit omgången. Det indikerar på att jag skulle kunna skriva mer tester för att testa funktionen fullt ut och sänka CRAP scoret. 
+
+### Förbättringar
+
+Skapa en ny rubrik “Förbättringar” där du väljer minst 3 förbättringar som du vill göra med din kod.
+
+    Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det kommer påverka mätvärdena för kvalitet.
+    Implementera sedan förbättringarna.
+    Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
+    Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar.
+
+Jag väljer att ge mig in i Game klassen för att försöka minska komplexiteten i modellen. Valet görs för att underlätta vid vidareutveckling samt för att förska korta ned exekveringstiden i denna centrala modell. Jag tycker det är tydligast att titta i Scrutinizer för komplexiteten av denna modell som innan förbättringar ligger på 16.\
+\
+Vidare kommer jag försöka skriva om testerna för Gameklassen för att öka kodtäckningen och fokusera på testningen av metoden som checkar vilken spelare som vinner omgången av Game 21. Valet görs eftersom denna metod är en central del av min kod som måste fungera för att applikationen ska uppnå sitt syfte. Kodtäckningen för klassen ligger innan förbättring på 91,3% vilket är klart godkänt, men eftersom klassen är så pass central vill jag uppnå 100% kodtäckning med bra tester.\
+\
+Slutligen kommer jag ge mig på att försöka förbättra värdet för cohesion i Gamemodellen. Just nu har klassen ett cohesion värde på på 3 enligt phpmetrics vilket jag förväntar mig kunna minska för att ha en klass som har enhetligt fokus på klassens syfte i applikationen. Jag vill genomföra denna förbättring för att inte klassen ska ha metoder som inte borde finnas i klassen. Jag tror att denna förbättring kan bli svår att genomföra utan att dela upp klassen, vilket jag inför förbättringen av koden tänker att jag egentligen vill undvika eftersom jag tror att metoderna jag lagt till i Game klassen, enligt mig, faktiskt hör hemma i just den klassen, det ska bli intressant att se hur jag kan vrida och vända på metoderna för att få ner cohesion värdet.\
+
+
+
+### Diskussion
+
+{% endapply %}
+
+{% endblock %}
