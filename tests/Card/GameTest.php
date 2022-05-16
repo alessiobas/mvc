@@ -69,4 +69,46 @@ class GameTest extends TestCase
         $this->assertEquals(0, $game->playerScore);
         $this->assertEquals(0, $game->bankScore);
     }
+
+    /**
+     * Construct object and verify that the result is correct depending on player/bank score
+     */
+    public function testWinner()
+    {
+        $game = new Game();
+        $game->playPlayer();
+        $game->playBank();
+        $game->playerScore = 22;
+        $game->bankScore = 17;
+        $game->checkWinner();
+        $this->assertEquals("Bank wins", $game->res);
+        $game->newRound();
+        $game->playPlayer();
+        $game->playBank();
+        $game->playerScore = 20;
+        $game->bankScore = 22;
+        $game->checkWinner();
+        $this->assertEquals("Player wins", $game->res);
+        $game->newRound();
+        $game->playPlayer();
+        $game->playBank();
+        $game->playerScore = 20;
+        $game->bankScore = 19;
+        $game->checkWinner();
+        $this->assertEquals("Player wins", $game->res);
+        $game->newRound();
+        $game->playPlayer();
+        $game->playBank();
+        $game->playerScore = 20;
+        $game->bankScore = 20;
+        $game->checkWinner();
+        $this->assertEquals("Bank wins", $game->res);
+        $game->newRound();
+        $game->playPlayer();
+        $game->playBank();
+        $game->playerScore = 19;
+        $game->bankScore = 20;
+        $game->checkWinner();
+        $this->assertEquals("Bank wins", $game->res);
+    }
 }
