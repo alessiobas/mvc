@@ -39,6 +39,7 @@ html {
 .exam-html {
     background-color: white;
     color: black;
+    scroll-behavior: smooth;
 }
 
 .exam-body {
@@ -58,6 +59,9 @@ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 ul.exam-navbar li {
@@ -80,7 +84,22 @@ ul.exam-navbar li a.active {
 
 ul.exam-navbar li a:hover {
     color: white;
-    background-color: #008CBA;
+    background-color: green;
+}
+
+.exam-header-img {
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    background-image: url("../img/a.jpg");
+    background-attachment: fixed;
+    height: 700px;
+}
+
+.title {
+    padding-top: 20em;
+    padding-left: 10em;
+    color: whitesmoke;
 }
 
 
