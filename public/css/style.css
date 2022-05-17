@@ -33,3 +33,54 @@ html {
 .choices {
     text-align: center;
 }
+
+/* Exam css */
+
+.exam-html {
+    background-color: white;
+    color: black;
+}
+
+.exam-body {
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.exam-footer {
+    text-align: center;
+}
+
+.exam-navbar {
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.exam-navbar li {
+    display: inline;
+    float: left;
+}
+
+ul.exam-navbar li a {
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+ul.exam-navbar li a.active {
+    color: white;
+    background-color: #008CBA;
+}
+
+ul.exam-navbar li a:hover {
+    color: white;
+    background-color: #008CBA;
+}
+
+

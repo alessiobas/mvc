@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html class="exam-html">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset("img/favicon.ico") }}">
+        <link rel="stylesheet" href="{{ asset("css/style.css") }}"/>
+    </head>
+    <body class="exam-body">
+    <ul class="exam-navbar">
+        <li><a href="{{ path("proj-home") }}">Home</a></li>
+        <li><a href="{{ path("about") }}">About</a></li>
+    </ul>
