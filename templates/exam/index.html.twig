@@ -1,8 +1,31 @@
 {% include 'exam/header.html.twig' %}
 <div>
+<h2>Välkommen!</h2>
+Projektet som visas upp på denna hemsida handlar om visualisering av indikationer för hållbar utveckling med fokus på nationella utsläpp av växthusgaser per bransch mellan år 2008-2016 i Sverige.<br>
+<br>
+En hållbar utveckling är en utveckling som tillfredsställer dagens behov utan att äventyra kommande generationers möjligheter att tillfredsställa sina behov.
+Hållbar utveckling innehåller aspekter inom såväl miljöområdet som den sociala och ekonomiska utvecklingen. Det finns många försök att genom indikatorsystem eller aggregerade mått designa mått för hållbar utveckling.
+<br>
+<br>
+Klimatförändringarna är ett verkligt och obestridligt hot mot hela vår civilisation. Utsläppen av växthusgaser fortsätter att stiga och som följd riskerar vi att nå en genomsnittlig global uppvärmning som överstiger två grader, vilket skulle få allvarliga konsekvenser för ekosystem, havsförsurning, mänsklig säkerhet, matproduktion, vattentillgång, hälsa och ökad risk för naturkatastrofer.
+<br>
+<br>
+Effekterna är redan nu synliga och kommer att bli katastrofala såvida vi inte agerar nu. Genom utbildning, innovation och efterlevnad av våra klimatförpliktelser kan vi göra nödvändiga förändringar för att skydda planeten. Dessa förändringar ger också stora möjligheter att modernisera vår infrastruktur som kommer att skapa nya arbetstillfällen och främja välstånd över hela världen.
+<br>
+<br>
+På denna sida summeras utsläpp av växthusgaser från svenska ekonomiska aktörer i tusen ton koldioxidekvivalenter varannat år mellan 2008-2016. På förstasidan (nedan) hittas ett linjediagram som visar upp utsläppstrenden inom de olika ekonomiska områdena i Sverige från år 2008-2016. 
+<br>
+<br>
+För att få en tydligare bild hur utsläppen ser ut per år för varje ekonomiskt område går det bra att klicka sig vidare via knapparna längst ned på sidan. Datan presenteras då i en pie chart som visar en översikt över uppdelningen av utsläppen från respektive område. Pie charten kompletteras med ett bardiagram som tydliggör utsläpssdatan per område för respektive år i staplar.
+</div>
+<br>
+
+<div>
 {{ render_chart(chart) }}
 </div>
 
+<br>
+<br>
 <div class="center">
     <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2008}) }}">2008</a>
     <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2010}) }}">2010</a>
@@ -10,4 +33,10 @@
     <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2014}) }}">2014</a>
     <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2016}) }}">2016</a>
 </div>
+<br>
+<br>
+Källor:
+<br>globalamålen.se som drivs av UNDP med stöd från Sida.
+<br>Statistikmyndigheten SCB
+<br>
 {% include 'exam/footer.html.twig' %}

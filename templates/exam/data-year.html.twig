@@ -1,0 +1,29 @@
+{% include 'exam/header.html.twig' %}
+<br>
+<br>
+<div class="pie-chart">
+{{ render_chart(chart2) }}
+</div>
+
+<br>
+<br>
+
+<div>
+{{ render_chart(chart1) }}
+</div>
+
+
+<br>
+<br>
+<div class="center">
+    <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2008}) }}">2008</a>
+    <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2010}) }}">2010</a>
+    <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2012}) }}">2012</a>
+    <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2014}) }}">2014</a>
+    <a class="year-button" href="{{ path("proj-data-year", {'dataYear': 2016}) }}">2016</a>
+</div>
+<br>
+<br>
+Källor:
+<br>Statistikmyndigheten SCB
+{% include 'exam/footer.html.twig' %}

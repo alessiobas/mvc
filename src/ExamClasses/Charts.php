@@ -159,7 +159,6 @@ class Charts
             'datasets' => [
                 [
                     'label' => 'Utsläpp av växthusgaser från svenska ekonomiska aktörer, tusen ton koldioxidekvivalenter',
-                    'backgroundColor' => 'rgb(255, 99, 132)',
                     'borderColor' => 'rgb(255, 99, 132)',
                     'data' => [$data->getJordbruk(),
                     $data->getMineral(),
@@ -170,6 +169,17 @@ class Charts
                     $data->getOvrigt(),
                     $data->getOffentligsektor(),
                     $data->getHushalletc()],
+                    'backgroundColor' => [
+                        'rgb(255, 99, 132)',
+                        'rgb(0, 0, 255)',
+                        'rgb(60, 179, 113)',
+                        'rgb(238, 130, 238)',
+                        'rgb(255, 165, 0)',
+                        'rgb(106, 90, 205)',
+                        'rgb(167, 180, 174)',
+                        'rgb(0, 180, 174)',
+                        'rgb(188, 67, 0)',
+                    ],
                 ],
             ],
         ]);
@@ -179,6 +189,48 @@ class Charts
                 'y' => [
                     'suggestedMin' => 500,
                     'suggestedMax' => 16000,
+                ],
+            ],
+        ]);
+
+        return $chart;
+    }
+
+    /**
+     * Creates Pie chart for selected year to show data on different industries
+     * @param object $chartbuilder
+     * @param array $data
+     * @return object $chart
+     */
+    public function createPieChart(object $chartBuilder, $data): object {
+        $chart = $chartBuilder->createChart(Chart::TYPE_PIE);
+
+        $chart->setData([
+            'labels' => ['Jordbruk, skogsbruk och fiske', 'Utvinning av mineral', 'Tillverkningsindustri', 'El, gas och värmeverk samt vatten, avlopp och avfall', 'Byggverksamhet', 'Transportindustri', 'Övriga tjänster', 'Offentlig sektor', 'Hushåll och ideella föreningar'],
+            'datasets' => [
+                [
+                    'label' => 'Utsläpp av växthusgaser från svenska ekonomiska aktörer, tusen ton koldioxidekvivalenter',
+                    'data' => [$data->getJordbruk(),
+                    $data->getMineral(),
+                    $data->getTillverkningsindustrin(),
+                    $data->getElochvatten(),
+                    $data->getBygg(),
+                    $data->getTransport(),
+                    $data->getOvrigt(),
+                    $data->getOffentligsektor(),
+                    $data->getHushalletc()],
+                    'backgroundColor' => [
+                        'rgb(255, 99, 132)',
+                        'rgb(0, 0, 255)',
+                        'rgb(60, 179, 113)',
+                        'rgb(238, 130, 238)',
+                        'rgb(255, 165, 0)',
+                        'rgb(106, 90, 205)',
+                        'rgb(167, 180, 174)',
+                        'rgb(0, 180, 174)',
+                        'rgb(188, 67, 0)',
+                    ],
+                    'hoverOffset' => 4,
                 ],
             ],
         ]);

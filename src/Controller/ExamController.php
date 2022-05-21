@@ -86,9 +86,13 @@ class ExamController extends AbstractController
             $dataSet = $Repo2016->findAll();
         }
 
-        $chart = $makeChart->createBarChart($chartBuilder, $dataSet[0]);
-        return $this->render('exam/index.html.twig', [
-            'chart' => $chart,
+        $chart1 = $makeChart->createBarChart($chartBuilder, $dataSet[0]);
+
+        $chart2 = $makeChart->createPieChart($chartBuilder, $dataSet[0]);
+
+        return $this->render('exam/data-year.html.twig', [
+            'chart1' => $chart1,
+            'chart2' => $chart2,
         ]);
     }
 }

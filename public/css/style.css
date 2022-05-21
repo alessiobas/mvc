@@ -50,6 +50,8 @@ html {
 
 .exam-footer {
     text-align: center;
+    background-color: #f3f3f3;
+    padding: 8px;
 }
 
 .exam-navbar {
@@ -122,4 +124,11 @@ ul.exam-navbar li a:hover {
 .center {
     margin: auto;
     width: 40%;
+}
+
+.pie-chart {
+    width: 1006px;
+    height: 1006px;
+    text-align: center;
+    margin: auto;
 }
