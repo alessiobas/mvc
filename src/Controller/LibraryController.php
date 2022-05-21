@@ -30,11 +30,11 @@ class LibraryController extends AbstractController
         $books = $libraryRepository
             ->findAll();
 
-            $data = [
+        $data = [
                 "books" => $books
             ];
 
-            return $this->render('library/show-books.html.twig', $data);
+        return $this->render('library/show-books.html.twig', $data);
     }
 
     /**
@@ -46,10 +46,10 @@ class LibraryController extends AbstractController
     ): Response {
         $book = $libraryRepository
             ->find($id);
-            $data = [
+        $data = [
                 "book" => $book
             ];
-            return $this->render('library/show-book.html.twig', $data);
+        return $this->render('library/show-book.html.twig', $data);
     }
 
     /**
@@ -100,11 +100,11 @@ class LibraryController extends AbstractController
         $book = $libraryRepository
             ->find($id);
 
-            $data = [
+        $data = [
                 "book" => $book
             ];
 
-            return $this->render('library/update-book.html.twig', $data);
+        return $this->render('library/update-book.html.twig', $data);
     }
 
     /**

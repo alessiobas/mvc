@@ -127,8 +127,14 @@ ul.exam-navbar li a:hover {
 }
 
 .pie-chart {
-    width: 1006px;
-    height: 1006px;
+    width: 600px;
+    height: 600px;
     text-align: center;
     margin: auto;
+}
+
+.year-diagram {
+    margin: auto;
+    height: 500px;
+    width: 800px;
 }

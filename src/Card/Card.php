@@ -29,7 +29,7 @@ class Card
     /**
      * Private method that changes color to symbol based on color string value
      * @param string $col which color of the card
-     */ 
+     */
     private function symbol(string $col): string
     {
         if ($col == "Hearts") {
