@@ -162,6 +162,411 @@ var classes = [
         "violations": {}
     },
     {
+        "name": "App\\Repository\\SweOrgsEmissions2016Repository",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "add",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "remove",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 3,
+        "nbMethods": 3,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 3,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 5,
+        "ccn": 3,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+            "Doctrine\\Persistence\\ManagerRegistry",
+            "App\\Entity\\SweOrgsEmissions2016",
+            "App\\Entity\\SweOrgsEmissions2016"
+        ],
+        "parents": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository"
+        ],
+        "implements": [],
+        "lcom": 2,
+        "length": 16,
+        "vocabulary": 5,
+        "volume": 37.15,
+        "difficulty": 1.75,
+        "effort": 65.01,
+        "level": 0.57,
+        "bugs": 0.01,
+        "time": 4,
+        "intelligentContent": 21.23,
+        "number_operators": 2,
+        "number_operands": 14,
+        "number_operators_unique": 1,
+        "number_operands_unique": 4,
+        "cloc": 42,
+        "loc": 63,
+        "lloc": 22,
+        "mi": 107,
+        "mIwoC": 59.32,
+        "commentWeight": 47.68,
+        "kanDefect": 0.29,
+        "relativeStructuralComplexity": 16,
+        "relativeDataComplexity": 0.33,
+        "relativeSystemComplexity": 16.33,
+        "totalStructuralComplexity": 48,
+        "totalDataComplexity": 1,
+        "totalSystemComplexity": 49,
+        "package": "App\\Repository\\",
+        "pageRank": 0.02,
+        "afferentCoupling": 1,
+        "efferentCoupling": 3,
+        "instability": 0.75,
+        "violations": {}
+    },
+    {
+        "name": "App\\Repository\\SweOrgsEmissions2012Repository",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "add",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "remove",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 3,
+        "nbMethods": 3,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 3,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 5,
+        "ccn": 3,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+            "Doctrine\\Persistence\\ManagerRegistry",
+            "App\\Entity\\SweOrgsEmissions2012",
+            "App\\Entity\\SweOrgsEmissions2012"
+        ],
+        "parents": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository"
+        ],
+        "implements": [],
+        "lcom": 2,
+        "length": 16,
+        "vocabulary": 5,
+        "volume": 37.15,
+        "difficulty": 1.75,
+        "effort": 65.01,
+        "level": 0.57,
+        "bugs": 0.01,
+        "time": 4,
+        "intelligentContent": 21.23,
+        "number_operators": 2,
+        "number_operands": 14,
+        "number_operators_unique": 1,
+        "number_operands_unique": 4,
+        "cloc": 42,
+        "loc": 63,
+        "lloc": 22,
+        "mi": 107,
+        "mIwoC": 59.32,
+        "commentWeight": 47.68,
+        "kanDefect": 0.29,
+        "relativeStructuralComplexity": 16,
+        "relativeDataComplexity": 0.33,
+        "relativeSystemComplexity": 16.33,
+        "totalStructuralComplexity": 48,
+        "totalDataComplexity": 1,
+        "totalSystemComplexity": 49,
+        "package": "App\\Repository\\",
+        "pageRank": 0.02,
+        "afferentCoupling": 1,
+        "efferentCoupling": 3,
+        "instability": 0.75,
+        "violations": {}
+    },
+    {
+        "name": "App\\Repository\\SweOrgsEmissions2010Repository",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "add",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "remove",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 3,
+        "nbMethods": 3,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 3,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 5,
+        "ccn": 3,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+            "Doctrine\\Persistence\\ManagerRegistry",
+            "App\\Entity\\SweOrgsEmissions2010",
+            "App\\Entity\\SweOrgsEmissions2010"
+        ],
+        "parents": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository"
+        ],
+        "implements": [],
+        "lcom": 2,
+        "length": 16,
+        "vocabulary": 5,
+        "volume": 37.15,
+        "difficulty": 1.75,
+        "effort": 65.01,
+        "level": 0.57,
+        "bugs": 0.01,
+        "time": 4,
+        "intelligentContent": 21.23,
+        "number_operators": 2,
+        "number_operands": 14,
+        "number_operators_unique": 1,
+        "number_operands_unique": 4,
+        "cloc": 42,
+        "loc": 63,
+        "lloc": 22,
+        "mi": 107,
+        "mIwoC": 59.32,
+        "commentWeight": 47.68,
+        "kanDefect": 0.29,
+        "relativeStructuralComplexity": 16,
+        "relativeDataComplexity": 0.33,
+        "relativeSystemComplexity": 16.33,
+        "totalStructuralComplexity": 48,
+        "totalDataComplexity": 1,
+        "totalSystemComplexity": 49,
+        "package": "App\\Repository\\",
+        "pageRank": 0.02,
+        "afferentCoupling": 1,
+        "efferentCoupling": 3,
+        "instability": 0.75,
+        "violations": {}
+    },
+    {
+        "name": "App\\Repository\\SweOrgsEmissions2014Repository",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "add",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "remove",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 3,
+        "nbMethods": 3,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 3,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 5,
+        "ccn": 3,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+            "Doctrine\\Persistence\\ManagerRegistry",
+            "App\\Entity\\SweOrgsEmissions2014",
+            "App\\Entity\\SweOrgsEmissions2014"
+        ],
+        "parents": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository"
+        ],
+        "implements": [],
+        "lcom": 2,
+        "length": 16,
+        "vocabulary": 5,
+        "volume": 37.15,
+        "difficulty": 1.75,
+        "effort": 65.01,
+        "level": 0.57,
+        "bugs": 0.01,
+        "time": 4,
+        "intelligentContent": 21.23,
+        "number_operators": 2,
+        "number_operands": 14,
+        "number_operators_unique": 1,
+        "number_operands_unique": 4,
+        "cloc": 42,
+        "loc": 63,
+        "lloc": 22,
+        "mi": 107,
+        "mIwoC": 59.32,
+        "commentWeight": 47.68,
+        "kanDefect": 0.29,
+        "relativeStructuralComplexity": 16,
+        "relativeDataComplexity": 0.33,
+        "relativeSystemComplexity": 16.33,
+        "totalStructuralComplexity": 48,
+        "totalDataComplexity": 1,
+        "totalSystemComplexity": 49,
+        "package": "App\\Repository\\",
+        "pageRank": 0.02,
+        "afferentCoupling": 1,
+        "efferentCoupling": 3,
+        "instability": 0.75,
+        "violations": {}
+    },
+    {
+        "name": "App\\Repository\\SweOrgsEmissionsRepository",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "add",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "remove",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 3,
+        "nbMethods": 3,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 3,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 5,
+        "ccn": 3,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+            "Doctrine\\Persistence\\ManagerRegistry",
+            "App\\Entity\\SweOrgsEmissions",
+            "App\\Entity\\SweOrgsEmissions"
+        ],
+        "parents": [
+            "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository"
+        ],
+        "implements": [],
+        "lcom": 2,
+        "length": 16,
+        "vocabulary": 5,
+        "volume": 37.15,
+        "difficulty": 1.75,
+        "effort": 65.01,
+        "level": 0.57,
+        "bugs": 0.01,
+        "time": 4,
+        "intelligentContent": 21.23,
+        "number_operators": 2,
+        "number_operands": 14,
+        "number_operators_unique": 1,
+        "number_operands_unique": 4,
+        "cloc": 42,
+        "loc": 63,
+        "lloc": 22,
+        "mi": 107,
+        "mIwoC": 59.32,
+        "commentWeight": 47.68,
+        "kanDefect": 0.29,
+        "relativeStructuralComplexity": 16,
+        "relativeDataComplexity": 0.33,
+        "relativeSystemComplexity": 16.33,
+        "totalStructuralComplexity": 48,
+        "totalDataComplexity": 1,
+        "totalSystemComplexity": 49,
+        "package": "App\\Repository\\",
+        "pageRank": 0.02,
+        "afferentCoupling": 1,
+        "efferentCoupling": 3,
+        "instability": 0.75,
+        "violations": {}
+    },
+    {
         "name": "App\\Card\\Card",
         "interface": false,
         "abstract": false,
@@ -229,7 +634,7 @@ var classes = [
         "totalDataComplexity": 12.5,
         "totalSystemComplexity": 15.5,
         "package": "App\\Card\\",
-        "pageRank": 0.22,
+        "pageRank": 0.17,
         "afferentCoupling": 2,
         "efferentCoupling": 0,
         "instability": 0,
@@ -433,7 +838,7 @@ var classes = [
         "totalDataComplexity": 6,
         "totalSystemComplexity": 11,
         "package": "App\\Card\\",
-        "pageRank": 0.07,
+        "pageRank": 0.05,
         "afferentCoupling": 4,
         "efferentCoupling": 1,
         "instability": 0.2,
@@ -506,7 +911,7 @@ var classes = [
         "totalDataComplexity": 0,
         "totalSystemComplexity": 2,
         "package": "App\\Card\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 1,
         "efferentCoupling": 2,
         "instability": 0.67,
@@ -571,7 +976,7 @@ var classes = [
         "totalDataComplexity": 2,
         "totalSystemComplexity": 2,
         "package": "App\\Card\\",
-        "pageRank": 0.05,
+        "pageRank": 0.04,
         "afferentCoupling": 2,
         "efferentCoupling": 0,
         "instability": 0,
@@ -649,7 +1054,7 @@ var classes = [
         "totalDataComplexity": 27,
         "totalSystemComplexity": 27,
         "package": "App\\Entity\\",
-        "pageRank": 0.05,
+        "pageRank": 0.04,
         "afferentCoupling": 2,
         "efferentCoupling": 0,
         "instability": 0,
@@ -747,8 +1152,798 @@ var classes = [
         "totalDataComplexity": 85,
         "totalSystemComplexity": 85,
         "package": "App\\Entity\\",
-        "pageRank": 0.05,
+        "pageRank": 0.04,
         "afferentCoupling": 2,
+        "efferentCoupling": 0,
+        "instability": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Entity\\SweOrgsEmissions2016",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "getId",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getJordbruk",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setJordbruk",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getMineral",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setMineral",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTillverkningsindustrin",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTillverkningsindustrin",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getElochvatten",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setElochvatten",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBygg",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setBygg",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTransport",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTransport",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOvrigt",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOvrigt",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOffentligsektor",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOffentligsektor",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getHushalletc",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setHushalletc",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTotal",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTotal",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 21,
+        "nbMethods": 0,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 11,
+        "nbMethodsSetters": 10,
+        "wmc": 0,
+        "ccn": 1,
+        "ccnMethodMax": 0,
+        "externals": [],
+        "parents": [],
+        "implements": [],
+        "lcom": 0,
+        "length": 93,
+        "vocabulary": 14,
+        "volume": 354.08,
+        "difficulty": 5.17,
+        "effort": 1829.43,
+        "level": 0.19,
+        "bugs": 0.12,
+        "time": 102,
+        "intelligentContent": 68.53,
+        "number_operators": 31,
+        "number_operands": 62,
+        "number_operators_unique": 2,
+        "number_operands_unique": 12,
+        "cloc": 14,
+        "loc": 123,
+        "lloc": 109,
+        "mi": 62.53,
+        "mIwoC": 37.57,
+        "commentWeight": 24.96,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 0,
+        "relativeDataComplexity": 21.48,
+        "relativeSystemComplexity": 21.48,
+        "totalStructuralComplexity": 0,
+        "totalDataComplexity": 451,
+        "totalSystemComplexity": 451,
+        "package": "App\\Entity\\",
+        "pageRank": 0.03,
+        "afferentCoupling": 1,
+        "efferentCoupling": 0,
+        "instability": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Entity\\SweOrgsEmissions2014",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "getId",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getJordbruk",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setJordbruk",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getMineral",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setMineral",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTillverkningsindustrin",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTillverkningsindustrin",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getElochvatten",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setElochvatten",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBygg",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setBygg",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTransport",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTransport",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOvrigt",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOvrigt",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOffentligsektor",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOffentligsektor",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getHushalletc",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setHushalletc",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTotal",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTotal",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 21,
+        "nbMethods": 0,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 11,
+        "nbMethodsSetters": 10,
+        "wmc": 0,
+        "ccn": 1,
+        "ccnMethodMax": 0,
+        "externals": [],
+        "parents": [],
+        "implements": [],
+        "lcom": 0,
+        "length": 93,
+        "vocabulary": 14,
+        "volume": 354.08,
+        "difficulty": 5.17,
+        "effort": 1829.43,
+        "level": 0.19,
+        "bugs": 0.12,
+        "time": 102,
+        "intelligentContent": 68.53,
+        "number_operators": 31,
+        "number_operands": 62,
+        "number_operators_unique": 2,
+        "number_operands_unique": 12,
+        "cloc": 14,
+        "loc": 123,
+        "lloc": 109,
+        "mi": 62.53,
+        "mIwoC": 37.57,
+        "commentWeight": 24.96,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 0,
+        "relativeDataComplexity": 21.48,
+        "relativeSystemComplexity": 21.48,
+        "totalStructuralComplexity": 0,
+        "totalDataComplexity": 451,
+        "totalSystemComplexity": 451,
+        "package": "App\\Entity\\",
+        "pageRank": 0.03,
+        "afferentCoupling": 1,
+        "efferentCoupling": 0,
+        "instability": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Entity\\SweOrgsEmissions2010",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "getId",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getJordbruk",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setJordbruk",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getMineral",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setMineral",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTillverkningsindustrin",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTillverkningsindustrin",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getElochvatten",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setElochvatten",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBygg",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setBygg",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTransport",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTransport",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOvrigt",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOvrigt",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOffentligsektor",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOffentligsektor",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getHushalletc",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setHushalletc",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTotal",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTotal",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 21,
+        "nbMethods": 0,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 11,
+        "nbMethodsSetters": 10,
+        "wmc": 0,
+        "ccn": 1,
+        "ccnMethodMax": 0,
+        "externals": [],
+        "parents": [],
+        "implements": [],
+        "lcom": 0,
+        "length": 93,
+        "vocabulary": 14,
+        "volume": 354.08,
+        "difficulty": 5.17,
+        "effort": 1829.43,
+        "level": 0.19,
+        "bugs": 0.12,
+        "time": 102,
+        "intelligentContent": 68.53,
+        "number_operators": 31,
+        "number_operands": 62,
+        "number_operators_unique": 2,
+        "number_operands_unique": 12,
+        "cloc": 14,
+        "loc": 123,
+        "lloc": 109,
+        "mi": 62.53,
+        "mIwoC": 37.57,
+        "commentWeight": 24.96,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 0,
+        "relativeDataComplexity": 21.48,
+        "relativeSystemComplexity": 21.48,
+        "totalStructuralComplexity": 0,
+        "totalDataComplexity": 451,
+        "totalSystemComplexity": 451,
+        "package": "App\\Entity\\",
+        "pageRank": 0.03,
+        "afferentCoupling": 1,
+        "efferentCoupling": 0,
+        "instability": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Entity\\SweOrgsEmissions2012",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "getId",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getJordbruk",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setJordbruk",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getMineral",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setMineral",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTillverkningsindustrin",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTillverkningsindustrin",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getElochvatten",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setElochvatten",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBygg",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setBygg",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTransport",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTransport",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOvrigt",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOvrigt",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOffentligsektor",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOffentligsektor",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getHushalletc",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setHushalletc",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTotal",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTotal",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 21,
+        "nbMethods": 0,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 11,
+        "nbMethodsSetters": 10,
+        "wmc": 0,
+        "ccn": 1,
+        "ccnMethodMax": 0,
+        "externals": [],
+        "parents": [],
+        "implements": [],
+        "lcom": 0,
+        "length": 93,
+        "vocabulary": 14,
+        "volume": 354.08,
+        "difficulty": 5.17,
+        "effort": 1829.43,
+        "level": 0.19,
+        "bugs": 0.12,
+        "time": 102,
+        "intelligentContent": 68.53,
+        "number_operators": 31,
+        "number_operands": 62,
+        "number_operators_unique": 2,
+        "number_operands_unique": 12,
+        "cloc": 14,
+        "loc": 123,
+        "lloc": 109,
+        "mi": 62.53,
+        "mIwoC": 37.57,
+        "commentWeight": 24.96,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 0,
+        "relativeDataComplexity": 21.48,
+        "relativeSystemComplexity": 21.48,
+        "totalStructuralComplexity": 0,
+        "totalDataComplexity": 451,
+        "totalSystemComplexity": 451,
+        "package": "App\\Entity\\",
+        "pageRank": 0.03,
+        "afferentCoupling": 1,
+        "efferentCoupling": 0,
+        "instability": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Entity\\SweOrgsEmissions",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "getId",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getJordbruk",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setJordbruk",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getMineral",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setMineral",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTillverkningsindustrin",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTillverkningsindustrin",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getElochvatten",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setElochvatten",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBygg",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setBygg",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTransport",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTransport",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOvrigt",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOvrigt",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getOffentligsektor",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setOffentligsektor",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getHushalletc",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setHushalletc",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTotal",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "setTotal",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 21,
+        "nbMethods": 0,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 11,
+        "nbMethodsSetters": 10,
+        "wmc": 0,
+        "ccn": 1,
+        "ccnMethodMax": 0,
+        "externals": [],
+        "parents": [],
+        "implements": [],
+        "lcom": 0,
+        "length": 93,
+        "vocabulary": 14,
+        "volume": 354.08,
+        "difficulty": 5.17,
+        "effort": 1829.43,
+        "level": 0.19,
+        "bugs": 0.12,
+        "time": 102,
+        "intelligentContent": 68.53,
+        "number_operators": 31,
+        "number_operands": 62,
+        "number_operators_unique": 2,
+        "number_operands_unique": 12,
+        "cloc": 14,
+        "loc": 123,
+        "lloc": 109,
+        "mi": 62.53,
+        "mIwoC": 37.57,
+        "commentWeight": 24.96,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 0,
+        "relativeDataComplexity": 21.48,
+        "relativeSystemComplexity": 21.48,
+        "totalStructuralComplexity": 0,
+        "totalDataComplexity": 451,
+        "totalSystemComplexity": 451,
+        "package": "App\\Entity\\",
+        "pageRank": 0.03,
+        "afferentCoupling": 1,
         "efferentCoupling": 0,
         "instability": 0,
         "violations": {}
@@ -830,7 +2025,7 @@ var classes = [
         "totalDataComplexity": 3,
         "totalSystemComplexity": 19,
         "package": "App\\Dice\\",
-        "pageRank": 0.03,
+        "pageRank": 0.02,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
         "instability": 0.5,
@@ -904,7 +2099,7 @@ var classes = [
         "totalDataComplexity": 6,
         "totalSystemComplexity": 6,
         "package": "App\\Dice\\",
-        "pageRank": 0.18,
+        "pageRank": 0.13,
         "afferentCoupling": 4,
         "efferentCoupling": 0,
         "instability": 0,
@@ -975,7 +2170,7 @@ var classes = [
         "totalDataComplexity": 1,
         "totalSystemComplexity": 3,
         "package": "App\\Dice\\",
-        "pageRank": 0.03,
+        "pageRank": 0.02,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
         "instability": 0.5,
@@ -1051,7 +2246,7 @@ var classes = [
         "totalDataComplexity": 1,
         "totalSystemComplexity": 33,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
         "instability": 1,
@@ -1182,7 +2377,7 @@ var classes = [
         "totalDataComplexity": 6.22,
         "totalSystemComplexity": 454.22,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 7,
         "instability": 1,
@@ -1262,7 +2457,7 @@ var classes = [
         "totalDataComplexity": 0.6,
         "totalSystemComplexity": 162.6,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 7,
         "instability": 1,
@@ -1360,7 +2555,7 @@ var classes = [
         "totalDataComplexity": 2.11,
         "totalSystemComplexity": 258.11,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 6,
         "instability": 1,
@@ -1427,7 +2622,7 @@ var classes = [
         "totalDataComplexity": 0.67,
         "totalSystemComplexity": 4.67,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
         "instability": 1,
@@ -1539,7 +2734,7 @@ var classes = [
         "totalDataComplexity": 18,
         "totalSystemComplexity": 24,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
         "instability": 1,
@@ -1616,7 +2811,7 @@ var classes = [
         "totalDataComplexity": 1,
         "totalSystemComplexity": 51,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 5,
         "instability": 1,
@@ -1693,7 +2888,7 @@ var classes = [
         "totalDataComplexity": 1,
         "totalSystemComplexity": 33,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
         "instability": 1,
@@ -1770,9 +2965,107 @@ var classes = [
         "totalDataComplexity": 1,
         "totalSystemComplexity": 33,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
+        "instability": 1,
+        "violations": {}
+    },
+    {
+        "name": "App\\Controller\\ExamController",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "index",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "about",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "yearData",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 3,
+        "nbMethods": 3,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 3,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 8,
+        "ccn": 6,
+        "ccnMethodMax": 6,
+        "externals": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "Symfony\\Component\\HttpFoundation\\Response",
+            "Symfony\\UX\\Chartjs\\Builder\\ChartBuilderInterface",
+            "App\\Repository\\SweOrgsEmissionsRepository",
+            "App\\Repository\\SweOrgsEmissions2010Repository",
+            "App\\Repository\\SweOrgsEmissions2012Repository",
+            "App\\Repository\\SweOrgsEmissions2014Repository",
+            "App\\Repository\\SweOrgsEmissions2016Repository",
+            "App\\ExamClasses\\Charts",
+            "Symfony\\Component\\Routing\\Annotation\\Route",
+            "Symfony\\Component\\HttpFoundation\\Response",
+            "Symfony\\Component\\Routing\\Annotation\\Route",
+            "Symfony\\Component\\HttpFoundation\\Response",
+            "Symfony\\UX\\Chartjs\\Builder\\ChartBuilderInterface",
+            "App\\Repository\\SweOrgsEmissionsRepository",
+            "App\\Repository\\SweOrgsEmissions2010Repository",
+            "App\\Repository\\SweOrgsEmissions2012Repository",
+            "App\\Repository\\SweOrgsEmissions2014Repository",
+            "App\\Repository\\SweOrgsEmissions2016Repository",
+            "App\\ExamClasses\\Charts",
+            "Symfony\\Component\\Routing\\Annotation\\Route"
+        ],
+        "parents": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController"
+        ],
+        "implements": [],
+        "lcom": 1,
+        "length": 108,
+        "vocabulary": 31,
+        "volume": 535.05,
+        "difficulty": 5.93,
+        "effort": 3170.69,
+        "level": 0.17,
+        "bugs": 0.18,
+        "time": 176,
+        "intelligentContent": 90.29,
+        "number_operators": 28,
+        "number_operands": 80,
+        "number_operators_unique": 4,
+        "number_operands_unique": 27,
+        "cloc": 9,
+        "loc": 50,
+        "lloc": 41,
+        "mi": 75.46,
+        "mIwoC": 44.91,
+        "commentWeight": 30.55,
+        "kanDefect": 0.5,
+        "relativeStructuralComplexity": 25,
+        "relativeDataComplexity": 1.22,
+        "relativeSystemComplexity": 26.22,
+        "totalStructuralComplexity": 75,
+        "totalDataComplexity": 3.67,
+        "totalSystemComplexity": 78.67,
+        "package": "App\\Controller\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 10,
         "instability": 1,
         "violations": {}
     },
@@ -1887,7 +3180,7 @@ var classes = [
         "totalDataComplexity": 3,
         "totalSystemComplexity": 1179,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 6,
         "instability": 1,
@@ -1955,7 +3248,7 @@ var classes = [
         "totalDataComplexity": 0.5,
         "totalSystemComplexity": 1.5,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 5,
         "instability": 1,
@@ -2093,10 +3386,91 @@ var classes = [
         "totalDataComplexity": 4.75,
         "totalSystemComplexity": 1804.75,
         "package": "App\\Controller\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 7,
         "instability": 1,
+        "violations": {}
+    },
+    {
+        "name": "App\\ExamClasses\\Charts",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "createHomeChart",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "createBarChart",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "createPieChart",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 4,
+        "nbMethods": 4,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 4,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 4,
+        "ccn": 1,
+        "ccnMethodMax": 1,
+        "externals": [],
+        "parents": [],
+        "implements": [],
+        "lcom": 4,
+        "length": 227,
+        "vocabulary": 47,
+        "volume": 1260.89,
+        "difficulty": 4.91,
+        "effort": 6192.38,
+        "level": 0.2,
+        "bugs": 0.42,
+        "time": 344,
+        "intelligentContent": 256.74,
+        "number_operators": 6,
+        "number_operands": 221,
+        "number_operators_unique": 2,
+        "number_operands_unique": 45,
+        "cloc": 29,
+        "loc": 56,
+        "lloc": 27,
+        "mi": 91.82,
+        "mIwoC": 46.93,
+        "commentWeight": 44.89,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 144,
+        "relativeDataComplexity": 0.42,
+        "relativeSystemComplexity": 144.42,
+        "totalStructuralComplexity": 576,
+        "totalDataComplexity": 1.69,
+        "totalSystemComplexity": 577.69,
+        "package": "App\\ExamClasses\\",
+        "pageRank": 0.02,
+        "afferentCoupling": 1,
+        "efferentCoupling": 0,
+        "instability": 0,
         "violations": {}
     },
     {
@@ -2149,7 +3523,7 @@ var classes = [
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
         "package": "App\\",
-        "pageRank": 0.02,
+        "pageRank": 0.01,
         "afferentCoupling": 0,
         "efferentCoupling": 1,
         "instability": 1,
