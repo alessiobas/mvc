@@ -22,31 +22,27 @@ class ExamController extends AbstractController
     /**
      * @Route("/proj", name="proj-home")
      */
-    public function index(ChartBuilderInterface $chartBuilder): Response
+    public function index(ChartBuilderInterface $chartBuilder,
+    SweOrgsEmissionsRepository $Repo2008,
+    SweOrgsEmissions2010Repository $Repo2010,
+    SweOrgsEmissions2012Repository $Repo2012,
+    SweOrgsEmissions2014Repository $Repo2014,
+    SweOrgsEmissions2016Repository $Repo2016,
+    ): Response
     {
-        $chart = $chartBuilder->createChart(Chart::TYPE_LINE);
+        $makeChart = new \App\ExamClasses\Charts();
 
-        $chart->setData([
-            'labels' => ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            'datasets' => [
-                [
-                    'label' => 'Test',
-                    'backgroundColor' => 'rgb(255, 99, 132)',
-                    'borderColor' => 'rgb(255, 99, 132)',
-                    'data' => [0, 10, 5, 2, 20, 30, 45],
-                ],
-            ],
-        ]);
+        $dataSet2008 = $Repo2008->findAll();
 
-        $chart->setOptions([
-            'scales' => [
-                'y' => [
-                    'suggestedMin' => 0,
-                    'suggestedMax' => 100,
-                ],
-            ],
-        ]);
+        $dataSet2010 = $Repo2010->findAll();
 
+        $dataSet2012 = $Repo2012->findAll();
+
+        $dataSet2014 = $Repo2014->findAll();
+
+        $dataSet2016 = $Repo2016->findAll();
+
+        $chart = $makeChart->createHomeChart($chartBuilder, $dataSet2008[0], $dataSet2010[0], $dataSet2012[0], $dataSet2014[0], $dataSet2016[0], );
         return $this->render('exam/index.html.twig', [
             'chart' => $chart,
         ]);
