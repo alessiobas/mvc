@@ -17,6 +17,10 @@ use App\Repository\SweOrgsEmissions2014Repository;
 use App\Repository\SweOrgsEmissions2016Repository;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Entity\SweOrgsEmissions;
+use App\Entity\SweOrgsEmissions2010;
+use App\Entity\SweOrgsEmissions2012;
+use App\Entity\SweOrgsEmissions2014;
+use App\Entity\SweOrgsEmissions2016;
 
 class ExamController extends AbstractController
 {
@@ -111,26 +115,44 @@ class ExamController extends AbstractController
     ): Response
     {
         $entityManager = $doctrine->getManager();
-        $product = $entityManager->getRepository(SweOrgsEmissions::class)->findAll();
+        $data2008 = $entityManager->getRepository(SweOrgsEmissions::class)->findAll();
 
-        $entityManager->remove($product[0]);
+        $data2010 = $entityManager->getRepository(SweOrgsEmissions2010::class)->findAll();
+
+        $data2012 = $entityManager->getRepository(SweOrgsEmissions2012::class)->findAll();
+
+        $data2014 = $entityManager->getRepository(SweOrgsEmissions2014::class)->findAll();
+
+        $data2016 = $entityManager->getRepository(SweOrgsEmissions2016::class)->findAll();
+
+        $entityManager->remove($data2008[0]);
+        $entityManager->remove($data2010[0]);
+        $entityManager->remove($data2012[0]);
+        $entityManager->remove($data2014[0]);
+        $entityManager->remove($data2016[0]);
         $entityManager->flush();
 
-        $sql = 'INSERT INTO swe_orgs_emissions(jordbruk,
-        mineral,
-        tillverkningsindustrin,
-        elochvatten,
-        bygg,
-        transport,
-        ovrigt,
-        offentligsektor,
-        hushalletc,
-        total)
-        VALUES (9509,797,18367,10248,1940,14899,4130,863,11392,72145)'
-        ;
+        $sqlQuery = new \App\Sql\sqlReset();
+        $sql2008 = $sqlQuery->sqlReset1();
+        $sql2010 = $sqlQuery->sqlReset2();
+        $sql2012 = $sqlQuery->sqlReset3();
+        $sql2014 = $sqlQuery->sqlReset4();
+        $sql2016 = $sqlQuery->sqlReset5();
 
-        $stmt = $eManagerRegistry->getConnection()->prepare($sql);
-        $stmt->executeQuery()->fetchAllAssociative();
+        $stmt2008 = $eManagerRegistry->getConnection()->prepare($sql2008);
+        $stmt2008->executeQuery()->fetchAllAssociative();
+
+        $stmt2010 = $eManagerRegistry->getConnection()->prepare($sql2010);
+        $stmt2010->executeQuery()->fetchAllAssociative();
+
+        $stmt2012 = $eManagerRegistry->getConnection()->prepare($sql2012);
+        $stmt2012->executeQuery()->fetchAllAssociative();
+
+        $stmt2014 = $eManagerRegistry->getConnection()->prepare($sql2014);
+        $stmt2014->executeQuery()->fetchAllAssociative();
+
+        $stmt2016 = $eManagerRegistry->getConnection()->prepare($sql2016);
+        $stmt2016->executeQuery()->fetchAllAssociative();
 
         return $this->render('exam/reset.html.twig');
     }
