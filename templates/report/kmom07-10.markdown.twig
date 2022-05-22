@@ -1,6 +1,6 @@
 Projekt
 -----------
-#### phpmd och phpstan
+### phpmd och phpstan
 Jag fokuserar på modulerna som är kopplade till projektet när jag använder dessa linters. Phpstan ger mig inga varningar på moduler kopplade till projektet, jag har valt att använda nivå 1.
 Phpmds varningar förklarar jag nedan:
 
@@ -19,4 +19,21 @@ LongVariable phpmd klagar på att $tillverkningsindustrin är för långt variab
 I mina repon som skapats via ORM:
 BooleanArgumentFlag klagar på att $flush indikerar på Single Responsibility Principle violation. Väljer att behålla eftersom det skapats via ORM.
 
+### Krav 1-3
+Jag valde att visualisera indikationer för hållbarhet inom FN:s Globala mål, nummer 13, bekämpa klimatförändringarna. Jag ville fokusera på att visulisera lokal data, så jag valde data från Sverige från år 2008-2016. Jag insåg snabbt att jag ville visa datan grafiskt på ett sätt där besökaren får en snabb och enkel visualisering av datan jag valt att presentera. Därför använder jag Symfony UX Chart.js för visualisering av data. Jag började läsa på om Chart.js för att se hur jag ska presentera datan. Jag satte grunden för webbsidans design, främst genom css och gick vidare.
 
+Jag gick sedan vidare till SCB och tog fram rapporter på datan jag ville ilustrera på sidan och satte upp en SQLite databas genom ORM, som vi lärt oss tidigare i kursen, där jag skapade 5 repos för olika år jag ville presentera. Jag satte upp en klass, Charts, tillsammans med en Controller för projektet, ExamController och började testa Chart.js. Efter att jag förstått mig på hur jag skulle presentera datan genom utvalda grafer satte jag upp diagrammen, förklarade på min förstasida vad sidans syfte är, tillsammans med text på min Om sida. (Läs mer om hur jag tänkte kring kodkvaliteten på min Om sida). Jag analyserade koden genom olika verktyg vi använt i kursen och skrev tester genom Mock för att göra mig av med databasberoendet vid testning av programmet. Jag lyckades nå 100% kodtäckning i min Charts klass och 95-100% kodtäckning för mina övriga modeller under kursen.
+
+När jag kände mig nöjd med sidan och visualiseringen av datan satte jag upp en reset route för att återställa databasen. Jag skrev egna SQL queries i App\Sql\Sql som jag kallar på i min controller. Dessa queries är skrivna för att tanka in data i databasen efter att jag raderat datan genom "remove" i controllen, under metoden reset. Jag ville först placera min Sql klass som innehåller metoder med SQL kod i en app/sql mapp precis under report, men lyckades inte få med datan därfirån, så flyttade filen så det fungerade att återställa databasen enligt kravet.
+
+Verktygen i kraven användes kontinuerligt under projektet och jag har tagit ut rapporter enligt kraven och länkat till dem i min Om sida (se kommentarer om phpmd och phpstan i överst i denna rapport och läs mer om mitt tänk kring kodkvalitet på min Om sida på webbplatsen).
+
+### Allmänt stycke om projektet
+Jag tyckte projektet i sig var rimligt utifrån kursens tidigare moment. Det var bra att man hade möjlighet att lägga sig på olika nivåer. Såhär i efterhand önskar jag att jag hade kodat ett spel istället för presentation av data, då det känns mer utmanande och anpassat för objektorienterad programmering än min nuvarande sida.
+
+Jag tyckte projektet gick helt ok lätt att genomföra, men önskar i efterhand att jag utmanat mig själv mer i grundkraven för att skapa ett mer komplext program och webbsida. Att skriva tester med Mock var svårt att förstå sig på, vilket jag tycker vi borde gått igenom under kursen då vi har krav att jobba med en databas och ett bra sätt att göra sig av med beroendet från databasen är att använda Mock. Mina tester i projektet tycker jag blev helt ok, men skulle kunnat bli bättre om jag hade med mig mer kunskap om Mock.
+
+Jag tycker även krav 1-3 borde anpassas lite utifrån vilken fokus man väljer i projektet. T.ex. är återställning väldigt bra att ha om man skriver ett kortspel eller annat spel, men mindre användbart vid presentation av data (även om det också är bra att ha med då vid eventuella problem). 
+
+### Tankar om kursen
+Jag tycker kursen var spretig och rätt svår att förstå sig på inom vissa kmoms. Det gick bättre under de senare kmomsen, men kmom1-3 var väldigt röriga och svåra att greppa. Jag tror att ni behöver sätta in mer fokuserad handledartid i denna kurs för att behålla folks motivation och fokus... Jag tappade själv en del motivation i kursen dels p.g.a känslan av att ha lite material att jobba med och endast vissa basic guider och förinspelade föreläsningar att luta mig mot (förutom resten av internet då såklart). Tycker det är svårt att debugga i php generellt och vissa gånger kändes det som om jag tappade lite kontroll över vad som faktiskt hände i mina uppgifter... Det var även svårt att hitta i phps guider och andra källor online tycker jag. Dock tyckte jag det var bra att det lades mycket fokus på kodkvalitet då det verkligen är något jag känner mig sugen på att lära mig mer om och "bemästra" att skriva högkvalitativ kod. Dock blev det svårt att implementera det vi lärt oss om kodkvalitet och känna motivation att gå det extra steget för att lära sig när jag tyckte att kursen i övrigt var rörig och att jag hade svårt att jobba med php på detta sätt. Jag skulle nog inte rekommendera kursen till en vän eller kollega om de inte var ute efter att specifikt lära sig php inom webbprogrammering. Kursen får 5 på en skala 1-10. 
