@@ -9,6 +9,7 @@ namespace App\ExamClasses;
 use App\Controller;
 use Symfony\UX\Chartjs\Builder\ChartBuilderInterface;
 use Symfony\UX\Chartjs\Model\Chart;
+use App\Entity\SweOrgsEmissions;
 
 /**
  * Charts class which creates charts for presenting data from database

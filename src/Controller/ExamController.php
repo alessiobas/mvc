@@ -16,6 +16,7 @@ use App\Repository\SweOrgsEmissions2012Repository;
 use App\Repository\SweOrgsEmissions2014Repository;
 use App\Repository\SweOrgsEmissions2016Repository;
 use Doctrine\Persistence\ManagerRegistry;
+use App\Entity\SweOrgsEmissions;
 
 class ExamController extends AbstractController
 {
@@ -52,6 +53,7 @@ class ExamController extends AbstractController
         );
         return $this->render('exam/index.html.twig', [
             'chart' => $chart,
+            'dataset' => $dataSet2008[0],
         ]);
     }
 
@@ -68,6 +70,43 @@ class ExamController extends AbstractController
      * @Route("/proj{dataYear}", name="proj-data-year")
      */
     public function yearData(
+        ChartBuilderInterface $chartBuilder,
+        SweOrgsEmissionsRepository $Repo2008,
+        SweOrgsEmissions2010Repository $Repo2010,
+        SweOrgsEmissions2012Repository $Repo2012,
+        SweOrgsEmissions2014Repository $Repo2014,
+        SweOrgsEmissions2016Repository $Repo2016,
+        int $dataYear
+    ): Response {
+        $makeChart = new \App\ExamClasses\Charts();
+        if ($dataYear == 2008) {
+            $dataSet = $Repo2008->findAll();
+        } elseif ($dataYear == 2010) {
+            $dataSet = $Repo2010->findAll();
+        } elseif ($dataYear == 2012) {
+            $dataSet = $Repo2012->findAll();
+        } elseif ($dataYear == 2014) {
+            $dataSet = $Repo2014->findAll();
+        } elseif ($dataYear == 2016) {
+            $dataSet = $Repo2016->findAll();
+        } else {
+            $dataSet = $Repo2008->findAll();
+        }
+
+        $chart1 = $makeChart->createBarChart($chartBuilder, $dataSet[0]);
+
+        $chart2 = $makeChart->createPieChart($chartBuilder, $dataSet[0]);
+
+        return $this->render('exam/data-year.html.twig', [
+            'chart1' => $chart1,
+            'chart2' => $chart2,
+        ]);
+    }
+
+    /**
+     * @Route("/proj/reset", name="proj-reset")
+     */
+    public function reset(
         ChartBuilderInterface $chartBuilder,
         SweOrgsEmissionsRepository $Repo2008,
         SweOrgsEmissions2010Repository $Repo2010,
