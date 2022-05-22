@@ -19,7 +19,16 @@ Valet att presentera datan med just dessa diagram var för att skapa flera sätt
 <a href="https://www.student.bth.se/~albi21/dbwebb-kurser/mvc/me/report/public/proj/reset">Återställ databasen</a><br>
 <br>
 <h4>Projektets kodkvalité</h4>
-
-
+Kodkvalité är ett relativt subjektivt begrepp. Enkelt förklarat betyder det att koden fungerar enligt kraven och uppfyller syftet, är lätt att följa, strukturerad, ren, enkel. Om koden uppfyller dessa delar blir det lättare att underhålla och vidareutveckla koden.
+<br>
+<br>
+Under projektets gång har jag försökt hålla en god kodkvalité och haft det i bakhuvudet när jag kodat projektet. Jag ville inte göra koden för komplex och spretig och hålla en god struktur i mina moduler. Jag försökte hålla mina metoder och klasser på en nivå där de inte gör något extra, utan håller ett tydligt fokus. Jag ville heller inte skapa metoder som innehåll för många beslutspunkter och orsaka en komplexare kod.
+<br>
+<br>
+Jag insåg tidigt när jag valt fokus för projektet att jag ville använda Symfony UX Chart.js som är en Symfony bundle som integrerar Chart.js. Det är ett verktyg för att skapa grafer och tabeller med snygg UX. Eftersom jag valde denna väg var jag till stor del tvungen att anpassa min kod utifrån verktygets specifika krav på kodstrukturen. Denna anpassning påverkade mig lite då jag var tvungen att släppa lite på mitt tänk kring kodkvalité när jag satte upp graferna, för att sedan gå tillbaka och se över koden och se över om jag kunde anpassa den för att öka kodkvaliteten.
+<br>
+<br>
+Jag använde mig främst av phpmetrics, Scrutinizer, phpcs samt phpunit rapporten (för rapport gällande kodtäckning) vid analys av koden. Jag försökte skapa kod som generellt höll en god kvalitetsnivå genom mätvärdena vi arbetet med under kursen. Komplexiteten lyckades jag bäst med att hålla nere på en väldigt bra nivå vilket kändes bra då jag trodde verktyget Chart.js skulle bidra med högre komplexitet. Hade lite problem i min projekt controller, men det var problem jag varit medveten om som blir svåra att gå runt p.g.a. chart.js. Det handlar främst om att jag får ut data som jag ska använda för att skapa graferna som, speciellt Scrutinizer, inte gillar. Verktygen hjälpte mig få en uppfattning kring kodkvaliteten och hjälpte mig få en överblick över koden och vilka delar jag skulle kunna modifera för att öka kvaiteten.
+<br><br>
 
 {% include 'exam/footer.html.twig' %}

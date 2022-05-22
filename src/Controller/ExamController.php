@@ -110,10 +110,10 @@ class ExamController extends AbstractController
     /**
      * @Route("/proj/reset", name="proj-reset")
      */
-    public function reset(ManagerRegistry $doctrine,
-    ManagerRegistry $eManagerRegistry,
-    ): Response
-    {
+    public function reset(
+        ManagerRegistry $doctrine,
+        ManagerRegistry $eManagerRegistry,
+    ): Response {
         $entityManager = $doctrine->getManager();
         $data2008 = $entityManager->getRepository(SweOrgsEmissions::class)->findAll();
 
@@ -132,7 +132,7 @@ class ExamController extends AbstractController
         $entityManager->remove($data2016[0]);
         $entityManager->flush();
 
-        $sqlQuery = new \App\Sql\sql();
+        $sqlQuery = new \App\Sql\Sql();
         $sql2008 = $sqlQuery->sqlReset1();
         $sql2010 = $sqlQuery->sqlReset2();
         $sql2012 = $sqlQuery->sqlReset3();

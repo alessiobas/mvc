@@ -1,2 +1,22 @@
 Projekt
 -----------
+#### phpmd och phpstan
+Jag fokuserar på modulerna som är kopplade till projektet när jag använder dessa linters. Phpstan ger mig inga varningar på moduler kopplade till projektet, jag har valt att använda nivå 1.
+Phpmds varningar förklarar jag nedan:
+
+I ExamController: 
+CamelCaseParameterName på mina variabler och parametrar för repon år 2008-2016. Dessa är namngivna enligt - $Repo20XX. Detta tycker jag själva är en extremt tydlig namngivning, som jag gärna låter stå kvar.
+
+MissingImport för class importer, men jag väljer att importera med hela vägen istället för att använda use i toppen av filen för att det krockar annars vid andra importer.
+
+ElseExpression phpmd tycker den inte behövs för yearData, men phpcs vill att jag har med det eftersom jag annars i teorin kan missa ett alternativ, därför väljer jag att ha kvar den. 
+
+I mina Entity filer som skapats via ORM:
+ShortVariable phpmd klagar på att $id är kort, jag väljer att behålla $id för tydlighet och användbarhet.
+
+LongVariable phpmd klagar på att $tillverkningsindustrin är för långt variabelnamn, men jag väljer att behålla det för extra tydlighet.
+
+I mina repon som skapats via ORM:
+BooleanArgumentFlag klagar på att $flush indikerar på Single Responsibility Principle violation. Väljer att behålla eftersom det skapats via ORM.
+
+

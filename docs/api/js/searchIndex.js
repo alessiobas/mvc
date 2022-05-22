@@ -446,6 +446,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-ExamController.html#method_yearData"
         },                {
+            "fqsen": "\\App\\Controller\\ExamController\u003A\u003Areset\u0028\u0029",
+            "name": "reset",
+            "summary": "",
+            "url": "classes/App-Controller-ExamController.html#method_reset"
+        },                {
             "fqsen": "\\App\\Controller\\LibraryController",
             "name": "LibraryController",
             "summary": "",
@@ -1636,6 +1641,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Repository-SweOrgsEmissionsRepository.html#method_remove"
         },                {
+            "fqsen": "\\App\\Sql\\Sql",
+            "name": "Sql",
+            "summary": "",
+            "url": "classes/App-Sql-Sql.html"
+        },                {
+            "fqsen": "\\App\\Sql\\Sql\u003A\u003AsqlReset1\u0028\u0029",
+            "name": "sqlReset1",
+            "summary": "",
+            "url": "classes/App-Sql-Sql.html#method_sqlReset1"
+        },                {
+            "fqsen": "\\App\\Sql\\Sql\u003A\u003AsqlReset2\u0028\u0029",
+            "name": "sqlReset2",
+            "summary": "",
+            "url": "classes/App-Sql-Sql.html#method_sqlReset2"
+        },                {
+            "fqsen": "\\App\\Sql\\Sql\u003A\u003AsqlReset3\u0028\u0029",
+            "name": "sqlReset3",
+            "summary": "",
+            "url": "classes/App-Sql-Sql.html#method_sqlReset3"
+        },                {
+            "fqsen": "\\App\\Sql\\Sql\u003A\u003AsqlReset4\u0028\u0029",
+            "name": "sqlReset4",
+            "summary": "",
+            "url": "classes/App-Sql-Sql.html#method_sqlReset4"
+        },                {
+            "fqsen": "\\App\\Sql\\Sql\u003A\u003AsqlReset5\u0028\u0029",
+            "name": "sqlReset5",
+            "summary": "",
+            "url": "classes/App-Sql-Sql.html#method_sqlReset5"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -1675,5 +1710,10 @@ Search.appendIndex(
             "name": "Repository",
             "summary": "",
             "url": "namespaces/app-repository.html"
+        },                {
+            "fqsen": "\\App\\Sql",
+            "name": "Sql",
+            "summary": "",
+            "url": "namespaces/app-sql.html"
         }            ]
 );
