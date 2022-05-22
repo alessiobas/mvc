@@ -106,37 +106,32 @@ class ExamController extends AbstractController
     /**
      * @Route("/proj/reset", name="proj-reset")
      */
-    public function reset(
-        ChartBuilderInterface $chartBuilder,
-        SweOrgsEmissionsRepository $Repo2008,
-        SweOrgsEmissions2010Repository $Repo2010,
-        SweOrgsEmissions2012Repository $Repo2012,
-        SweOrgsEmissions2014Repository $Repo2014,
-        SweOrgsEmissions2016Repository $Repo2016,
-        int $dataYear
-    ): Response {
-        $makeChart = new \App\ExamClasses\Charts();
-        if ($dataYear == 2008) {
-            $dataSet = $Repo2008->findAll();
-        } elseif ($dataYear == 2010) {
-            $dataSet = $Repo2010->findAll();
-        } elseif ($dataYear == 2012) {
-            $dataSet = $Repo2012->findAll();
-        } elseif ($dataYear == 2014) {
-            $dataSet = $Repo2014->findAll();
-        } elseif ($dataYear == 2016) {
-            $dataSet = $Repo2016->findAll();
-        } else {
-            $dataSet = $Repo2008->findAll();
-        }
+    public function reset(ManagerRegistry $doctrine,
+    ManagerRegistry $eManagerRegistry,
+    ): Response
+    {
+        $entityManager = $doctrine->getManager();
+        $product = $entityManager->getRepository(SweOrgsEmissions::class)->findAll();
 
-        $chart1 = $makeChart->createBarChart($chartBuilder, $dataSet[0]);
+        $entityManager->remove($product[0]);
+        $entityManager->flush();
 
-        $chart2 = $makeChart->createPieChart($chartBuilder, $dataSet[0]);
+        $sql = 'INSERT INTO swe_orgs_emissions(jordbruk,
+        mineral,
+        tillverkningsindustrin,
+        elochvatten,
+        bygg,
+        transport,
+        ovrigt,
+        offentligsektor,
+        hushalletc,
+        total)
+        VALUES (9509,797,18367,10248,1940,14899,4130,863,11392,72145)'
+        ;
 
-        return $this->render('exam/data-year.html.twig', [
-            'chart1' => $chart1,
-            'chart2' => $chart2,
-        ]);
+        $stmt = $eManagerRegistry->getConnection()->prepare($sql);
+        $stmt->executeQuery()->fetchAllAssociative();
+
+        return $this->render('exam/reset.html.twig');
     }
 }
