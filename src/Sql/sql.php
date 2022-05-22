@@ -2,7 +2,7 @@
 
 namespace App\Sql;
 
-class Sql
+class sql
 {
     public function sqlReset1()
     {

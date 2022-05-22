@@ -132,7 +132,7 @@ class ExamController extends AbstractController
         $entityManager->remove($data2016[0]);
         $entityManager->flush();
 
-        $sqlQuery = new \App\Sql\Sql();
+        $sqlQuery = new \App\Sql\sql();
         $sql2008 = $sqlQuery->sqlReset1();
         $sql2010 = $sqlQuery->sqlReset2();
         $sql2012 = $sqlQuery->sqlReset3();
